@@ -2,8 +2,8 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import About from './components/About';
-import Features from './components/Features';
-import Service from './components/Service';
+import Fitness from './components/Fitness';
+import Nutrition from './components/Nutrition';
 import Coaches from './components/Coaches';
 import Contact from './components/Contact';
 
@@ -32,9 +32,9 @@ function App() {
         <Header />
         <About />
 
-        <Features />
+        <Fitness />
 
-        <Service />
+        <Nutrition />
 
         <Coaches />
 

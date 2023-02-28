@@ -1,4 +1,4 @@
-export default function Features(){
+export default function Fitness(){
     return(
         <section id="features">
             <div className="container">

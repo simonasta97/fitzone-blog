@@ -14,7 +14,7 @@ export default function Header(){
                                     <h3>Build Your </h3>
                                     <h1>Body Strong</h1>
 
-                                    <p>Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum neque. Massa sit sociis sapien. Rhoncus eu adipiscing integer laoreet a ante metus vidi massa. Aenean eleifend. </p>						
+                                    <p>Stop Guessing And Stressing About How To Be Healthy! You don't need more confusing information. We've been the trusted voice in fitness and nutrition. </p>						
                                 </div>						
                             </div>
                         </div>
@@ -27,7 +27,7 @@ export default function Header(){
                                     <h3>Build Your </h3>
                                     <h1>Body Strong</h1>
 
-                                    <p>Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum neque. Massa sit sociis sapien. Rhoncus eu adipiscing integer laoreet a ante metus vidi massa. Aenean eleifend. </p>						
+                                    <p>Stop Guessing And Stressing About How To Be Healthy! You don't need more confusing information. We've been the trusted voice in fitness and nutrition.</p>						
                                 </div>						
                             </div>
                         </div>
@@ -40,7 +40,7 @@ export default function Header(){
                                     <h3>Build Your </h3>
                                     <h1>Body Strong</h1>
 
-                                    <p>Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum neque. Massa sit sociis sapien. Rhoncus eu adipiscing integer laoreet a ante metus vidi massa. Aenean eleifend. </p>						
+                                    <p>Stop Guessing And Stressing About How To Be Healthy! You don't need more confusing information. We've been the trusted voice in fitness and nutrition.</p>						
                                 </div>						
                             </div>
                         </div>

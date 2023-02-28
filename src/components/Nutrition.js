@@ -1,6 +1,6 @@
-export default function Service(){
+export default function Nutrition(){
     return(
-        <section id="service">
+        <section id="nutrition">
             <div className="container">
                 <h2>Body Sculpturing Program</h2>
                 <div className="row">
