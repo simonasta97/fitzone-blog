@@ -7,9 +7,9 @@ export default function About(){
                     <div className="col-md-9">
                         <div className="about_content">
                             <img src="images/about_img.jpg" alt="" className="about_img" />
-                            <h2>Ut enim ad minima veniam</h2>
+                            <h2>We help people all over the world live a healthier Life!</h2>
 
-                            <p>Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum neque. Massa sit sociis sapien. Massa sit sociis sapien. Rhoncus eu adipiscing integer laoreet a ante metus vidi massa. Aenean eleifend. Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum neque. Massa sit sociis sapien. Rhoncus eu adipiscing integer laoreet a ante metus vidi massa. Aenean eleifend. Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum neque.</p>
+                            <p>The hardest part of improving your fitness and nutrition is finding someone that understands why you struggle. Get our science-backed tips every week on how to live a healthier life.</p>
 
                             <a href="#about" className="btn know_btn">SIGN UP</a>
                         </div>

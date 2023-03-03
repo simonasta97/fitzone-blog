@@ -6,30 +6,19 @@ import Fitness from './components/Fitness';
 import Nutrition from './components/Nutrition';
 import Coaches from './components/Coaches';
 import Contact from './components/Contact';
+import Loading from './components/Loading';
+import ScrollUp from './components/ScrollUp';
 
 
 function App() {
   return (
     <div>
-        <div id="loading">
-            <div id="loading-center">
-                <div id="loading-center-absolute">
-                    <div className="object" id="object_one"></div>
-                    <div className="object" id="object_two"></div>
-                    <div className="object" id="object_three"></div>
-                    <div className="object" id="object_four"></div>
-                    <div className="object" id="object_five"></div>
-                    <div className="object" id="object_six"></div>
-                    <div className="object" id="object_seven"></div>
-                    <div className="object" id="object_eight"></div>
-                    <div className="object" id="object_big"></div>
-                </div>
-            </div>
-        </div>
+        <Loading />
 
         <Navigation />
 
         <Header />
+        
         <About />
 
         <Fitness />
@@ -40,11 +29,7 @@ function App() {
 
         <Contact />
 
-
-
-        <div className="scrollup">
-            <a href="#"><i className="fa fa-chevron-up"></i></a>
-        </div>
+        <ScrollUp />
     </div>
   );
 }
