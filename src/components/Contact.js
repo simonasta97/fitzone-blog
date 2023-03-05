@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Contact(){
     return(
         <footer id="contact">
@@ -16,12 +18,11 @@ export default function Contact(){
                         <div className="footer_right quick_link">
                             <h3>Quick Links</h3>
                             <ul className="list-unstyled footer_menu">
-                                <li role="presentation"><a href="#home">Home</a></li>
-                                <li role="presentation"><a href="#about">About</a></li>
-                                <li role="presentation"><a href="#features">Fitness</a></li>
-                                <li role="presentation"><a href="#nutrition">Nutrition</a></li>
-                                <li role="presentation"><a href="#coaches">Recent News</a></li>
-                                <li role="presentation"><a href="#contact">Contact us</a></li>
+                            <li role="presentation"><Link to="/">Home</Link></li>
+                            <li role="presentation"><Link to="/features">Fitness</Link></li>
+                            <li role="presentation"><Link to="/nutrition">Nutrition</Link></li>
+                            <li role="presentation"><Link to="/coaches">Recent News</Link></li>
+                            <li role="presentation"><Link to="/contact">Contact us</Link></li>
                             </ul>
                         </div>
                     </div>

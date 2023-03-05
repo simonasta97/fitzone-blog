@@ -13,6 +13,7 @@ export default function Nutrition(){
                             <div className="service_caption">
                                 <h4>Body Sculpturing Program</h4>
                                 <p>by Mark Freeman, Jan 15, 2017</p>
+                                <a href="" className="btn know_btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -25,6 +26,7 @@ export default function Nutrition(){
                             <div className="service_caption">
                                 <h4>Body Sculpturing Program</h4>
                                 <p>by Mark Freeman, Jan 15, 2017</p>
+                                <a href="" className="btn know_btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -37,6 +39,7 @@ export default function Nutrition(){
                             <div className="service_caption">
                                 <h4>Body Sculpturing Program</h4>
                                 <p>by Mark Freeman, Jan 15, 2017</p>
+                                <a href="" className="btn know_btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -49,6 +52,7 @@ export default function Nutrition(){
                             <div className="service_caption">
                                 <h4>Body Sculpturing Program</h4>
                                 <p>by Mark Freeman, Jan 15, 2017</p>
+                                <a href="" className="btn know_btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -61,6 +65,7 @@ export default function Nutrition(){
                             <div className="service_caption">
                                 <h4>Body Sculpturing Program</h4>
                                 <p>by Mark Freeman, Jan 15, 2017</p>
+                                <a href="" className="btn know_btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -73,6 +78,7 @@ export default function Nutrition(){
                             <div className="service_caption">
                                 <h4>Body Sculpturing Program</h4>
                                 <p>by Mark Freeman, Jan 15, 2017</p>
+                                <a href="" className="btn know_btn">Read More</a>
                             </div>
                         </div>
                     </div>
