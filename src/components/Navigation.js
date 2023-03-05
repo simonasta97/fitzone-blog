@@ -7,9 +7,7 @@ export default function Navigation(){
                     <a href="#"><img src="images/fitness.png" alt="Fitness" /></a>
 
                     <ul className="list-inline contact_info">
-                        <li><a href=""><span className="fa fa-envelope"></span><p>fitzone_blog@abv.bg</p></a></li>
-                        <li><a href=""><span className="fa fa-phone"></span><p>089 999 9999</p></a></li>
-                        <li><a href=""><span className="fa fa-clock-o"></span><p>Mon - Sat : 9AM - 6PM</p></a></li>
+                        <li><a href="#login"><span className="fa fa-envelope"></span><p>SIGN IN</p></a></li>
                     </ul>
 
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#nav">

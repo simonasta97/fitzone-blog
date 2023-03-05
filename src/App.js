@@ -12,13 +12,13 @@ import ScrollUp from './components/ScrollUp';
 
 function App() {
   return (
-    <div>
+    <>
         <Loading />
 
         <Navigation />
 
         <Header />
-        
+
         <About />
 
         <Fitness />
@@ -30,7 +30,7 @@ function App() {
         <Contact />
 
         <ScrollUp />
-    </div>
+    </>
   );
 }
 

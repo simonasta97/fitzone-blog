@@ -17,9 +17,9 @@ export default function About(){
                     <div className="col-md-3">
                         <div className="yoga_content">
                             <div className="yoga">
-                                <h3>Yoga <span>&xlarr;</span></h3>
-                                <p>Vici nisi etiam orci faucibus felis justo sem cras viverra sociis rutrum</p>
-
+                                <h3>Fitzone BLOG</h3>
+                                <p>REAL talk, recipes, & more!</p>
+                                <a href="#about" className="btn know_btn">READ THE BLOG</a>
                             </div>
                             <div className="yoga_banner">
                                 <img src="images/yoga_img.jpg" alt="Yoga" className="yoga_img" />

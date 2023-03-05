@@ -7,8 +7,8 @@ export default function Contact(){
                     <div className="col-md-6">
                         <div className="about_us">
                             <div className="about_us_content">
-                                <img src="images/footer_logo.png" alt="Fitness" />
-                                <p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quasoa molestias excepturi sintal occaecati cupiditate non provident similique sunt.</p>						
+                                <img src="images/fitness.png" alt="Fitness" />
+                                <p>Whether you're just starting your journey or already crushin' it - the FITZONE community is here to sweat with you, support you, and celebrate you through it all.</p>						
                             </div>
                         </div>
                     </div>
@@ -16,13 +16,11 @@ export default function Contact(){
                         <div className="footer_right quick_link">
                             <h3>Quick Links</h3>
                             <ul className="list-unstyled footer_menu">
-                                <li role="presentation"><a href="#">Home</a></li>
+                                <li role="presentation"><a href="#home">Home</a></li>
                                 <li role="presentation"><a href="#about">About</a></li>
-                                <li role="presentation"><a href="#company">Company</a></li>
-                                <li role="presentation"><a href="#services">Our Services</a></li>
-                                <li role="presentation"><a href="#service">Service</a></li>
-                                <li role="presentation"><a href="#location">Location</a></li>
-                                <li role="presentation"><a href="#news">Recent News</a></li>
+                                <li role="presentation"><a href="#features">Fitness</a></li>
+                                <li role="presentation"><a href="#nutrition">Nutrition</a></li>
+                                <li role="presentation"><a href="#coaches">Recent News</a></li>
                                 <li role="presentation"><a href="#contact">Contact us</a></li>
                             </ul>
                         </div>
@@ -31,9 +29,7 @@ export default function Contact(){
                         <div className="footer_right">
                             <h3>Contact Us</h3>
                             <ul className="list-unstyled footer_contact_info">
-                                <li><a href=""><span className="fa fa-map-marker"></span><p>hello@PSDFreebies.com</p></a></li>
-                                <li><a href=""><span className="fa fa-phone"></span><p>85 26 37 48 59</p></a></li>
-                                <li><a href=""><span className="fa fa-envelope"></span><p>Mon - Sat : 9AM - 6PM</p></a></li>
+                                <li><a href=""><span className="fa fa-map-marker"></span><p>fitzone_blog@abv.bg</p></a></li>
                             </ul>
 
                             <ul className="list-inline social">
