@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Contact(){
+export default function Footer(){
     return(
         <footer id="contact">
             <div className="white_shape"></div>
@@ -30,7 +30,7 @@ export default function Contact(){
                         <div className="footer_right">
                             <h3>Contact Us</h3>
                             <ul className="list-unstyled footer_contact_info">
-                                <li><a href=""><span className="fa fa-map-marker"></span><p>fitzone_blog@abv.bg</p></a></li>
+                                <li><a href=""><span className="fa fa-envelope"></span><p>fitzone_blog@abv.bg</p></a></li>
                             </ul>
 
                             <ul className="list-inline social">

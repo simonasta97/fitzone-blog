@@ -9,7 +9,7 @@ export default function Navigation(){
                     <a href="/"><img src="images/fitness.png" alt="Fitness" /></a>
 
                     <ul className="list-inline contact_info">
-                        <li><a href="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></a></li>
+                        <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li>
                     </ul>
 
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#nav">
