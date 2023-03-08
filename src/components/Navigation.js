@@ -1,15 +1,24 @@
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../contexts/AuthContext";
 
 export default function Navigation(){
+    const { user } = useAuthContext();
     return (
         <nav className="navbar navbar-default">
             <div className="container">
 
                 <div className="navbar-header">
-                    <a href="/"><img src="images/fitness.png" alt="Fitness" /></a>
+                    <Link to="/"><img src="images/fitness.png" alt="Fitness" /></Link>
 
                     <ul className="list-inline contact_info">
-                        <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li>
+                        {user.email
+                            ? 
+                                <><li><span>Hello, {user.email}</span></li>
+                                <li><Link to="/logout">LOGOUT</Link></li></>
+                                
+                            : <li><Link to="/login">SIGN IN</Link></li>
+                        }
+                        {/* <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li> */}
                     </ul>
 
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#nav">

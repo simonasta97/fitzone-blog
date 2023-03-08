@@ -41,15 +41,13 @@ export default function Login(){
                             <div className="carousel_caption_inner">
                                 <section id="login-page" className="auth">
                                     <form id="login" onSubmit={onSubmit}>
-                                        <div className="container">
-                                            <div className="brand-logo" />
                                             <h1>Login</h1>
                                             <label htmlFor="email">Email:</label>
                                             <input
                                                 type="email"
                                                 id="email"
                                                 name="email"
-                                                placeholder="Sokka@gmail.com"
+                                                placeholder="example@gmail.com"
                                             />
                                             <label htmlFor="login-pass">Password:</label>
                                             <input type="password" id="login-password" name="password" />
@@ -59,7 +57,6 @@ export default function Login(){
                                                     If you don't have profile click <Link to="/register">here</Link>
                                                 </span>
                                             </p>
-                                        </div>
                                     </form>
                                 </section>
                             </div>						
