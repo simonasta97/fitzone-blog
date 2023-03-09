@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 
+import "./Register.css";
 import * as authService from "../../services/authService";
 import { withAuth } from "../../contexts/AuthContext";
 import { Link } from 'react-router-dom';
@@ -40,21 +41,30 @@ const Register = ({ auth }) => {
                     <div className="carousel-caption photo_overlay">
                         <div className="container">
                             <div className="carousel_caption_inner">
-                                <section id="register-page" className="content auth">
-                                    <form id="register" onSubmit={onSubmit}>
-                                        <div className="container">
+                                    <form id="register" className="Auth-form" onSubmit={onSubmit}>
+                                        <div className="Auth-form-content">
                                             <h1>Register</h1>
-                                            <label htmlFor="email">Email:</label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                            />
-                                            <label htmlFor="pass">Password:</label>
-                                            <input type="password" name="password" id="register-password" />
-                                            <label htmlFor="con-pass">Confirm Password:</label>
-                                            <input type="password" name="confirm-password" id="confirm-password" />
-                                            <input className="btn" type="submit" Value="Sign up" />
+                                            <div className="form-group mt-3">
+                                                <label htmlFor="email">Email:</label>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    className="form-control mt-1"
+                                                    name="email"
+                                                    placeholder="Enter email"
+                                                />
+                                            </div>
+                                            <div className="form-group mt-3">
+                                                <label htmlFor="pass">Password:</label>
+                                                <input type="password" name="password" className="form-control mt-1" id="register-password" placeholder="Enter password" />
+                                            </div>
+                                            <div className="form-group mt-3">
+                                                <label htmlFor="con-pass">Confirm Password:</label>
+                                                <input type="password" name="confirm-password" className="form-control mt-1" id="confirm-password" placeholder="Enter password" />
+                                            </div>
+                                            <div className="d-grid gap-2 mt-3">
+                                                <input className="btn btn-primary" type="submit" value="Sign up" />
+                                            </div>
                                             <p className="field">
                                                 <span>
                                                     If you already have profile click <Link to="/login">here</Link>
@@ -62,7 +72,6 @@ const Register = ({ auth }) => {
                                             </p>
                                         </div>
                                     </form>
-                                </section>
                             </div>						
                         </div>
                     </div>

@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
 
-import Navigation from "../Navigation";
-import Footer from "../Footer";
+import "./Login.css";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as authService from "../../services/authService";
 import { Link } from "react-router-dom";
@@ -40,23 +39,32 @@ export default function Login(){
                         <div className="container">
                             <div className="carousel_caption_inner">
                                 <section id="login-page" className="auth">
-                                    <form id="login" onSubmit={onSubmit}>
+                                    <form id="login" onSubmit={onSubmit} className="Auth-form">
+                                        <div className="Auth-form-content">
                                             <h1>Login</h1>
-                                            <label htmlFor="email">Email:</label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                placeholder="example@gmail.com"
-                                            />
-                                            <label htmlFor="login-pass">Password:</label>
-                                            <input type="password" id="login-password" name="password" />
-                                            <input type="submit" className="btn submit" value="Login" />
+                                            <div className="form-group mt-3">
+                                                <label htmlFor="email">Email:</label>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    className="form-control mt-1"
+                                                    placeholder="Enter email"
+                                                />
+                                            </div>
+                                            <div className="form-group mt-3">
+                                                <label htmlFor="login-pass">Password:</label>
+                                                <input type="password" id="login-password" className="form-control mt-1" name="password"  placeholder="Enter password"/>
+                                            </div>
+                                            <div className="d-grid gap-2 mt-3">
+                                                <input type="submit" className="btn btn-primary" value="Login" />
+                                            </div>
                                             <p className="field">
                                                 <span>
                                                     If you don't have profile click <Link to="/register">here</Link>
                                                 </span>
                                             </p>
+                                        </div>
                                     </form>
                                 </section>
                             </div>						
