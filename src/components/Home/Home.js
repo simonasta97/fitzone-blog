@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import Header from "./Header";
+import { useContext } from 'react';
+import { PostContext } from "../../contexts/PostContext";
+import Header from "../Header";
+import { LatestPosts } from './LatestPosts';
 
 export default function Home(){
+    const { posts } = useContext(PostContext)
     return(
         <>
             <Header/>
@@ -32,6 +36,13 @@ export default function Home(){
                                 </div>					
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section id="nutrition">
+                <div className="container">
+                    <div className="row">
+                        {posts.map(post => <LatestPosts key={post._id} post={post} />)}
                     </div>
                 </div>
             </section>

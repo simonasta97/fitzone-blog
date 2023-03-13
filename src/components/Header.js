@@ -2,10 +2,7 @@ export default function Header(){
     return(
         <header id="home">
             <div id="carousel" className="carousel slide" data-ride="carousel">
-
-                
                 <div className="carousel-inner" role="listbox">
-
                     <div className="item active">
                         <img src="images/slider_img.jpg" alt="Strong Body" />
                         <div className="carousel-caption photo_overlay">
@@ -45,7 +42,6 @@ export default function Header(){
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </header>
