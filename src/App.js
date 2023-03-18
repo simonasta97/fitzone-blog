@@ -1,8 +1,6 @@
 import './App.css';
 import { Routes, Route} from 'react-router';
 import Navigation from './components/Navigation';
-import Fitness from './components/Fitness';
-import Nutrition from './components/Nutrition';
 import Coaches from './components/Coaches';
 import Loading from './components/Loading';
 import ScrollUp from './components/ScrollUp';
@@ -13,6 +11,7 @@ import Login  from './components/Login/Login';
 import { RegisterWithAuth } from './components/Register/Register';
 import PrivateGuard from './components/common/PrivateGuard';
 import { Logout } from './components/Logout/Logout';
+import Blog from './components/Blog/Blog';
 import { PostProvider } from './contexts/PostContext';
 
 
@@ -30,8 +29,7 @@ function App() {
                     <Route element={<PrivateGuard />}>
                         <Route path="/logout" element={<Logout />} />
                     </Route>
-                    <Route path="/features" element={<Fitness />} />
-                    <Route path="/nutrition" element={<Nutrition />} />
+                    <Route path="/blog" element={<Blog />} />
                     <Route path="/coaches" element={<Coaches />} />
                 </Routes>
                 <Footer />

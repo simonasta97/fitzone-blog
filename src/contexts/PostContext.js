@@ -8,7 +8,7 @@ export const PostContext = createContext();
 const postReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_POSTS':
-            return action.payload.map(x => ({ ...x, comments: [] }));
+            return action.payload.map(x => ({ ...x}));
         case 'ADD_POST':
             return [...state, action.payload];
         case 'FETCH_POST_DETAILS':
@@ -57,7 +57,7 @@ export const PostProvider = ({
             payload: postData,
         })
 
-        navigate('/nutrition');
+        navigate('/blog');
     };
 
     const postEdit = (postId, postData) => {

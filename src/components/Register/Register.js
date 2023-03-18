@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 const Register = ({ auth }) => {
     const navigate = useNavigate();
-    useEffect(()=>{document.getElementById('register').classList.add('active')},[])
+    useEffect(() => { document.getElementById('register').classList.add('active') }, [])
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -33,14 +33,14 @@ const Register = ({ auth }) => {
     }
 
     return (
-    <>
-        <div id="carousel" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner" role="listbox">
-                <div className="item active">
-                    <img src="images/slider_img.jpg" alt="Strong Body" />
-                    <div className="carousel-caption photo_overlay">
-                        <div className="container">
-                            <div className="carousel_caption_inner">
+        <>
+            <div id="carousel" className="carousel slide" data-ride="carousel">
+                <div className="carousel-inner" role="listbox">
+                    <div className="item active">
+                        <img src="images/slider_img.jpg" alt="Strong Body" />
+                        <div className="carousel-caption photo_overlay">
+                            <div className="container">
+                                <div className="carousel_caption_inner">
                                     <form id="register" className="Auth-form" onSubmit={onSubmit}>
                                         <div className="Auth-form-content">
                                             <h1>Register</h1>
@@ -72,13 +72,13 @@ const Register = ({ auth }) => {
                                             </p>
                                         </div>
                                     </form>
-                            </div>						
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </>
+        </>
     );
 };
 

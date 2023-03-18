@@ -1492,8 +1492,8 @@
     		},
     		"143e5265-333e-4150-80e4-16b61de31aa0": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "THE DIFFERENT FORMS OF WHEY PROTEIN AND WHAT’S BEST FOR YOU",
-    			description: "What’s best: whey protein concentrate, isolate, or hydrolysate? This article breaks down the differences to help you understand what’s best for you.",
+    			title: "THE DIFFERENT FORMS OF WHEY PROTEIN AND WHAT IS BEST FOR YOU",
+    			description: "What is best: whey protein concentrate, isolate, or hydrolysate? This article breaks down the differences to help you understand what’s best for you.",
     			img: "https://cdn1.focus.bg/bazar//ed/original/ed6ef606e77aa2fece99eaa7a0c43490.jpg",
     			_createdOn: 1614935181470,
     			_id: "143e5265-333e-4150-80e4-16b61de31aa0"

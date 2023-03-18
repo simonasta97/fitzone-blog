@@ -13,10 +13,14 @@ export default function Navigation(){
                     <ul className="list-inline contact_info">
                         {user.email
                             ? 
-                                <><li><span>Hello, {user.email}</span></li>
-                                <li><Link to="/logout">LOGOUT</Link></li></>
+                                <>
+                                    <li><span>Hello, {user.email}</span></li>
+                                    <li><Link to="/create">ADD POST</Link></li>
+                                    <li><Link to="/logout">LOGOUT</Link></li>
+                                </>
                                 
-                            : <li><Link to="/login">SIGN IN</Link></li>
+                            :   
+                                <li><Link to="/login">SIGN IN</Link></li>
                         }
                         {/* <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li> */}
                     </ul>
@@ -31,8 +35,7 @@ export default function Navigation(){
                 <div className="collapse navbar-collapse navbar-right" id="nav" >
                     <ul className="nav">
                         <li role="presentation"><Link to="/">Home</Link></li>
-                        <li role="presentation"><Link to="/features">Fitness</Link></li>
-                        <li role="presentation"><Link to="/nutrition">Nutrition</Link></li>
+                        <li role="presentation"><Link to="/blog">Blog</Link></li>
                         <li role="presentation"><Link to="/coaches">Recent News</Link></li>
                         <li role="presentation"><Link to="/contact">Contact us</Link></li>
                     </ul>
