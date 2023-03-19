@@ -14,6 +14,7 @@ import { Logout } from './components/Logout/Logout';
 import Blog from './components/Blog/Blog';
 import { PostProvider } from './contexts/PostContext';
 import { PostDetails } from './components/Details/PostDetails';
+import { PostEdit } from './components/Edit/PostEdit';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/register" element={<RegisterWithAuth/>} />
                     <Route element={<PrivateGuard />}>
                         <Route path="/logout" element={<Logout />} />
+                        <Route path="/details/:postId/edit" element={<PostEdit />} />
                     </Route>
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/coaches" element={<Coaches />} />
