@@ -1505,6 +1505,31 @@
     			img: "https://www.bornfitness.com/wp-content/uploads/2021/06/COVERS-2-670x404.png",
     			_createdOn: 1614935268135,
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
+    		},
+            "833e0e57-793e-46c4-a9db-deb9e3484909": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			title: "How to Turn Plateau Into Progress",
+    			description: "Most people freak out when the scale gets stuck and assume something is broken. Yet, plateaus are part of the process of long-term, sustainable weight loss.",
+    			img: "https://www.bornfitness.com/wp-content/uploads/2022/10/lindsay-henwood-7_kRuX1hSXM-unsplash-670x404.jpg",
+    			_createdOn: 1614935268135,
+    			_id: "833e0e57-793e-46c4-a9db-deb9e3484909"
+    		},
+            "247efaa7-793e-46c4-a9db-deb9e3484909": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			title: "Why Your Ab Workouts Don't Work",
+    			description: "Abs might be made in the kitchen, but that only tells half the story of why so many people perform endless abs exercises and still don’t see the results they want.",
+    			img: "https://www.bornfitness.com/wp-content/uploads/2021/06/COVERS-6-670x404.png",
+    			_createdOn: 1614935268130,
+    			_id: "247efaa7-793e-46c4-a9db-deb9e3484909"
+    		}
+            ,
+            "c8608c22-793e-46c4-a9db-deb9e3484909": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			title: "Is A Calorie Really A Calorie?",
+    			description: "Understanding how to balance your diet to give you the right amount of sanity  while not letting your hunger go wild  is the key to feeling in control of your diet.",
+    			img: "https://www.bornfitness.com/wp-content/uploads/2022/02/what-is-a-calorie.png",
+    			_createdOn: 1614935263130,
+    			_id: "c8608c22-793e-46c4-a9db-deb9e3484909"
     		}
     	},
     	likes: {

@@ -2,9 +2,10 @@
     width: 800px;
     margin: auto;
     padding-bottom: 65px;
+    text-align: center;
 }
 
-.title {font-size: 30px; margin:0; color: rgb(119, 16, 16);}
+.title {font-size: 30px; margin:0; color:#b74e94;}
 
 .pointOfInterestDetails {
     margin: 15px auto;
