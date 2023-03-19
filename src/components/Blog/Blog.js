@@ -1,12 +1,12 @@
 import Header from "../Header";
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { PostContext } from '../../contexts/PostContext'
 import { Post } from './Post';
 
 export default function Blog(){
     const { posts } = useContext(PostContext)
-
+    useEffect(()=>{document.getElementById('blog').classList.add('active')},[])
     return(
         <>
             <Header />

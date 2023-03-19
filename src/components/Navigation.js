@@ -15,12 +15,15 @@ export default function Navigation(){
                             ? 
                                 <>
                                     <li><span>Hello, {user.email}</span></li>
-                                    <li><Link to="/create">ADD POST</Link></li>
+                                    <li><Link id='create' to="/create">ADD POST</Link></li>
                                     <li><Link to="/logout">LOGOUT</Link></li>
                                 </>
                                 
-                            :   
-                                <li><Link to="/login">SIGN IN</Link></li>
+                            :
+                                <>
+                                    <li><Link  id='login' to="/login">LOGIN</Link></li>
+                                    <li><Link  id='register' to="/register">REGISTER</Link></li>
+                                </>
                         }
                         {/* <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li> */}
                     </ul>
@@ -34,8 +37,8 @@ export default function Navigation(){
 
                 <div className="collapse navbar-collapse navbar-right" id="nav" >
                     <ul className="nav">
-                        <li role="presentation"><Link to="/">Home</Link></li>
-                        <li role="presentation"><Link to="/blog">Blog</Link></li>
+                        <li role="presentation"><Link id='home' to="/">Home</Link></li>
+                        <li role="presentation"><Link id='blog' to="/blog">Blog</Link></li>
                         <li role="presentation"><Link to="/coaches">Recent News</Link></li>
                         <li role="presentation"><Link to="/contact">Contact us</Link></li>
                     </ul>

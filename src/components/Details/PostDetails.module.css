@@ -1,0 +1,61 @@
+.container {
+    width: 800px;
+    margin: auto;
+    padding-bottom: 65px;
+}
+
+.title {font-size: 30px; margin:0; color: rgb(119, 16, 16);}
+
+.pointOfInterestDetails {
+    margin: 15px auto;
+    width: 100%;
+}
+
+.pointOfInterestDetails img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.pointOfInterestDetails p {
+    color: #314a36;
+    margin: 0px;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.pointOfInterestDetailsContent {
+    border: 1px solid #314a36;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.pointOfInterestDetailsContent button {
+    border: 1px solid #D9483C;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #D9483C;
+    margin-left: 20px;
+    padding: 5px 10px;
+}
+
+.pointOfInterestDetailsContent button:hover {
+    background-color: #D9483C;
+    color: #fff;    
+}
+
+.buttons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-end;
+    border-top: 1px dashed #314a36;
+    padding-top: 20px;
+}
+
+.buttons .icon {
+    margin-right: 5px;
+}

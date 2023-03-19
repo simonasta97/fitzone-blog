@@ -13,6 +13,7 @@ import PrivateGuard from './components/common/PrivateGuard';
 import { Logout } from './components/Logout/Logout';
 import Blog from './components/Blog/Blog';
 import { PostProvider } from './contexts/PostContext';
+import { PostDetails } from './components/Details/PostDetails';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                     </Route>
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/coaches" element={<Coaches />} />
+                    <Route path="/details/:postId" element={<PostDetails />} />
                 </Routes>
                 <Footer />
                 <ScrollUp />
