@@ -21,7 +21,7 @@ export default function About() {
                             <div className="yoga">
                                 <h3>Fitzone BLOG</h3>
                                 <p>REAL talk, recipes, & more!</p>
-                                <a href="#about" className="btn know_btn">READ THE BLOG</a>
+                                <Link to="/blog" className="btn know_btn">READ THE BLOG</Link>
                             </div>
                             <div className="yoga_banner">
                                 <img src="images/yoga_img.jpg" alt="Yoga" className="yoga_img" />

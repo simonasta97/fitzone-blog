@@ -1,7 +1,7 @@
 import { useContext,useEffect } from "react";
 import { useNavigate } from "react-router";
 
-import "./Login.css";
+import style from './Login.module.css';
 import { AuthContext } from "../../contexts/AuthContext";
 import * as authService from "../../services/authService";
 import { Link } from "react-router-dom";
@@ -40,8 +40,8 @@ export default function Login(){
                             <div className="container">
                                 <div className="carousel_caption_inner">
                                     <section id="login-page" className="auth">
-                                        <form id="login" onSubmit={onSubmit} className="Auth-form">
-                                            <div className="Auth-form-content">
+                                        <form onSubmit={onSubmit} className={style.authForm}>
+                                            <div className={style.authFormContent}>
                                                 <h1>Login</h1>
                                                 <div className="form-group mt-3">
                                                     <label htmlFor="email">Email:</label>

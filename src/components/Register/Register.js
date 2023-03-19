@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 
-import "./Register.css";
+import style from './Register.module.css';
 import * as authService from "../../services/authService";
 import { withAuth } from "../../contexts/AuthContext";
 import { Link } from 'react-router-dom';
@@ -41,8 +41,8 @@ const Register = ({ auth }) => {
                         <div className="carousel-caption photo_overlay">
                             <div className="container">
                                 <div className="carousel_caption_inner">
-                                    <form id="register" className="Auth-form" onSubmit={onSubmit}>
-                                        <div className="Auth-form-content">
+                                    <form className={style.authForm} onSubmit={onSubmit}>
+                                        <div className={style.authFormContent}>
                                             <h1>Register</h1>
                                             <div className="form-group mt-3">
                                                 <label htmlFor="email">Email:</label>
