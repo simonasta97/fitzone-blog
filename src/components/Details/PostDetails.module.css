@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.title {font-size: 30px; margin:0; color:#b74e94;}
+.title {font-size: 30px; margin:0; color:#f7f3f5;}
 
 .pointOfInterestDetails {
     margin: 15px auto;
@@ -34,7 +34,7 @@
 }
 
 .pointOfInterestDetailsContent p {
-    color: #011305;
+    color: #e7eee9;
     margin: 0px;
     word-wrap: break-word;
     white-space: pre-line;
@@ -95,7 +95,7 @@
 
 .commentForm textarea{
     border: none;
-    background-color: #f1f1f1;
+    background-color: #ee95e9;
     color: black;
     border-radius: 5px;
     line-height: 2em;

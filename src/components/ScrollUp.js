@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function ScrollUp(){
     return(
         <div className="scrollup">
-            <a href="/"><i className="fa fa-chevron-up"></i></a>
+            <Link to="/"><i className="fa fa-chevron-up"></i></Link>
         </div>
     );
 }
