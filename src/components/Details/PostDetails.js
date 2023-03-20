@@ -3,12 +3,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { PostContext } from '../../contexts/PostContext';
 import { useAuthContext } from '../../contexts/AuthContext';
 import style from './PostDetails.module.css';
+import * as commentService from'../../services/commentService'
 import * as postService from '../../services/postService';
 import Header  from '../Header';
 
 export const PostDetails = () => {
     const navigate = useNavigate();
-    const { fetchPostDetails, selectPost, postRemove } = useContext(PostContext);
+    const { addComment, fetchPostDetails, selectPost, postRemove} = useContext(PostContext);
     const { postId } = useParams();
     const { user } = useAuthContext();
     useEffect(()=>{document.getElementById('blog').classList.add('active')},[])
@@ -18,9 +19,25 @@ export const PostDetails = () => {
     useEffect(() => {
         (async () => {
             const postDetails = await postService.getOne(postId);
-            fetchPostDetails(postId, { ...postDetails});
+            const postComments = await commentService.getByPostId(postId)
+            fetchPostDetails(postId, { ...postDetails, comments: postComments.map(x=> `${x.user.email}: ${x.text}` )});
         })();
     }, [])
+
+    const addCommentHandler = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+
+        const comment = formData.get('comment');
+
+        if (comment!=="") {
+            commentService.create(postId, comment)
+            .then(result => {
+                addComment(postId, comment);
+            });
+            e.target.reset();
+        }
+    };
 
     const postDeleteHandler = () => {
         const confirmation = window.confirm('Are you sure you want to delete this post?');
@@ -40,20 +57,39 @@ export const PostDetails = () => {
                 <h2 className={style.title}>{currentPost.title}</h2>
                 <div className={style.pointOfInterestDetails}>
                     <div className={style.pointOfInterestDetailsTop}>
-                        <img src={currentPost.img} alt="Post"/>
+                        <img src={currentPost.img} alt="Post" />
                     </div>
 
-                    <div className={style.pointOfInterestDetailsContent} >
+                    <div className={style.comments} >
                         <p>{currentPost.description}</p>
-                        {user._id===currentPost._ownerId
-                        ?<div className={style.buttons}>
-                            <button onClick={(e)=>{e.preventDefault();navigate((`/details/${postId}/edit`))}} className="btn">Edit</button>
-                            <button onClick={postDeleteHandler} className="btn">Delete</button>
-                        </div>
-                        :null
+                        {user._id === currentPost._ownerId
+                            ? <div className={style.buttons}>
+                                <button onClick={(e) => { e.preventDefault(); navigate((`/details/${postId}/edit`)) }} className="btn">Edit</button>
+                                <button onClick={postDeleteHandler} className="btn">Delete</button>
+                            </div>
+                            : null
                         }
                     </div>
                 </div>
+                <h2 className={style.title}>Comments:</h2>
+                <ul>
+                    {currentPost.comments
+                        ? currentPost.comments.map(x =>
+                            <li key={x} className={style.pointOfInterestDetailsContent}>
+                                <p>{x}</p>
+                            </li>
+                        )
+                        : <li className={style.noComments}><p>No comments yet.</p></li>
+                    }
+                </ul>
+                {user.email
+                    ?
+                    <form className={style.commentForm} onSubmit={addCommentHandler}>
+                        <textarea name="comment" placeholder="Write your comment..." />
+                        <input name="Submit" type="submit" value="Add Comment" />
+                    </form>
+                    : null
+                }
             </div>
         </>
     );

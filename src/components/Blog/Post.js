@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-
 export const Post = ({ post }) => {
     const navigate = useNavigate()
     return (

@@ -8,12 +8,14 @@ export const PostContext = createContext();
 const postReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_POSTS':
-            return action.payload.map(x => ({ ...x}));
+            return action.payload.map(x => ({ ...x, comments: []}));
         case 'ADD_POST':
             return [...state, action.payload];
         case 'FETCH_POST_DETAILS':
         case 'EDIT_POST':
             return state.map(x => x._id === action.postId ? action.payload : x);
+        case 'ADD_COMMENT':
+            return state.map(x => x._id === action.postId ? { ...x, comments: [...x.comments, action.payload] } : x);
         case 'REMOVE_POST':
             return state.filter(x => x._id !== action.postId);
         default:
@@ -75,11 +77,20 @@ export const PostProvider = ({
         })
     }
 
+    const addComment = (postId, comment) => {
+        dispatch({
+            type: 'ADD_COMMENT',
+            payload: comment,
+            postId
+        });
+    }
+
     return (
         <PostContext.Provider value={{
             posts,
             postAdd,
             postEdit,
+            addComment,
             fetchPostDetails,
             selectPost,
             postRemove
