@@ -36,10 +36,10 @@ export const PostEdit = () => {
     return (
         <>
             <Header />
-            <section id="edit-page" className="auth">
+            <section id="features" className="auth">
+                <h2>Edit Post:</h2>
                 <form id="edit" className={style.createForm} onSubmit={onSubmit}>
                     <div>
-                        <h3 className={style.editHeading}>Edit Post:</h3>
                         <label htmlFor="title">Post title:</label>
                         <input type="text" id="title" name="title" defaultValue={currentPost.title} />
                         
@@ -47,8 +47,8 @@ export const PostEdit = () => {
                         <input type="text" id="img" name="img" defaultValue={currentPost.img} />
                         <label htmlFor="description">Post description:</label>
                         <textarea name="description" id="description" defaultValue={currentPost.description} />
-                        <input className="btn" type="submit" value="Edit Post" />
-                        <button onClick={(e)=>{e.preventDefault();navigate((`/details/${postId}`))}}>Go back</button>
+                        <input name="Edit" type="submit" value="Edit Post" />
+                        <button onClick={(e)=>{e.preventDefault();navigate((`/details/${postId}`))}} className={style.backBtn}>Go back</button>
                     </div>
                 </form>
             </section>

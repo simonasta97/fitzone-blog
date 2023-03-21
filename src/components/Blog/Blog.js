@@ -15,10 +15,12 @@ export default function Blog() {
                         <div className={style.box}>
                             <h2 className={style.title}>BLOG Posts</h2>
                         </div>
-                        {posts.length > 0
-                            ? posts.map(post => <Post key={post._id} post={post} />)
-                            : <h3>THERE'S NO POST TO SHOW</h3>
-                        }
+                        <div className="row">
+                            {posts.length > 0
+                                ? posts.map(post => <Post key={post._id} post={post} />)
+                                : <h3>THERE'S NO POST TO SHOW</h3>
+                            }
+                        </div>
                         <div className={style.box}>
                             <h2 className={style.title}>Come back later for more!</h2>
                         </div>

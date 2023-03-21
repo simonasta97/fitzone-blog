@@ -34,8 +34,8 @@ export const PostCreate = () => {
                     <input type="text" id="img" name="imgUrl" placeholder="Enter URL here"/>
                     <label htmlFor="description">Description:</label>
                     <textarea name="description" id="description" placeholder="Enter a description " />
-                    <input className={style.submitBtn} type="submit" value="Add Post" />
-                    <button onClick={(e) => { e.preventDefault(); navigate((`/`)) }} className="btn">Go back</button>
+                    <input name="Create" type="submit" value="Add Post" />
+                    <button onClick={(e) => { e.preventDefault(); navigate((`/`)) }} className={style.backBtn}>Go back</button>
                 </form>
             </section>
         </>

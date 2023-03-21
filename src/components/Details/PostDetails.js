@@ -56,6 +56,13 @@ export const PostDetails = () => {
             <section id="features">
                 <div className={style.container}>
                     <h2 className={style.title}>{currentPost.title}</h2>
+                    {user._id === currentPost._ownerId
+                        ? <div className={style.buttons}>
+                            <button onClick={(e) => { e.preventDefault(); navigate((`/details/${postId}/edit`)) }} className={style.editBtn}>Edit</button>
+                            <button onClick={postDeleteHandler} className={style.deleteBtn}>Delete</button>
+                        </div>
+                        : null
+                    }
                     <div className={style.pointOfInterestDetails}>
                         <div className={style.pointOfInterestDetailsTop}>
                             <img src={currentPost.img} alt="Post" />
@@ -63,26 +70,18 @@ export const PostDetails = () => {
 
                         <div className={style.comments} >
                             <p>{currentPost.description}</p>
-                            {user._id === currentPost._ownerId
-                                ? <div className={style.buttons}>
-                                    <button onClick={(e) => { e.preventDefault(); navigate((`/details/${postId}/edit`)) }} className="btn">Edit</button>
-                                    <button onClick={postDeleteHandler} className="btn">Delete</button>
-                                </div>
-                                : null
-                            }
+                            
                         </div>
                     </div>
                     <h2 className={style.title}>Comments:</h2>
-                    <ul>
                         {currentPost.comments
                             ? currentPost.comments.map(x =>
-                                <li key={x} className={style.pointOfInterestDetailsContent}>
+                                <div key={x} className={style.pointOfInterestDetailsContent}>
                                     <p>{x}</p>
-                                </li>
+                                </div>
                             )
-                            : <li className={style.noComments}><p>No comments yet.</p></li>
+                            : <div className={style.noComments}><p>No comments yet.</p></div>
                         }
-                    </ul>
                     {user.email
                         ?
                         <form className={style.commentForm} onSubmit={addCommentHandler}>

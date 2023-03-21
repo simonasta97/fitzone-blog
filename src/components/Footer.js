@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-export default function Footer(){
-    return(
+export default function Footer() {
+    return (
         <footer id="contact">
             <div className="white_shape"></div>
             <div className="container">
@@ -10,7 +10,7 @@ export default function Footer(){
                         <div className="about_us">
                             <div className="about_us_content">
                                 <img src="images/fitness.png" alt="Fitness" />
-                                <p>Whether you're just starting your journey or already crushin' it - the FITZONE community is here to sweat with you, support you, and celebrate you through it all.</p>						
+                                <p>Whether you're just starting your journey or already crushin' it - the FITZONE community is here to sweat with you, support you, and celebrate you through it all.</p>
                             </div>
                         </div>
                     </div>
@@ -18,11 +18,10 @@ export default function Footer(){
                         <div className="footer_right quick_link">
                             <h3>Quick Links</h3>
                             <ul className="list-unstyled footer_menu">
-                            <li role="presentation"><Link to="/">Home</Link></li>
-                            <li role="presentation"><Link to="/features">Fitness</Link></li>
-                            <li role="presentation"><Link to="/nutrition">Nutrition</Link></li>
-                            <li role="presentation"><Link to="/coaches">Recent News</Link></li>
-                            <li role="presentation"><Link to="/contact">Contact us</Link></li>
+                                <li role="presentation"><Link to="/">Home</Link></li>
+                                <li role="presentation"><Link id='blog' to="/blog">Blog</Link></li>
+                                <li role="presentation"><Link to="/coaches">Recent News</Link></li>
+                                <li role="presentation"><Link to="/contact">Contact us</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -45,10 +44,10 @@ export default function Footer(){
 
                 <div className="footer-copyright text-center">
                     <p className="wow fadeInRight" data-wow-duration="1s">
-                        Made with 
+                        Made with
                         <i className="fa fa-heart"></i>
-                        by 
-                        <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a> 
+                        by
+                        <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a>
                         2016. All Rights Reserved
                     </p>
                 </div>
