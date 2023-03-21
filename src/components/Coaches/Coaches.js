@@ -1,9 +1,11 @@
-import Header from "./Header";
+import Header from "../Header";
+import style from './Coaches.module.css';
 
 export default function Coaches(){
     return(
         <>
             <Header />
+            <h2 className={style.title}>FitZone Coaching</h2>
             <div id="coaches" className="coaches">
                 <div className="container">
                     <div className="coaches_content">
@@ -23,7 +25,7 @@ export default function Coaches(){
                             <img src="images/coach_img4.png" alt="Coach" />
                         </div>
                         <div className="size_110 no_photo coach_item">
-                            <h3>Yoga</h3>
+                            <h3>Gym</h3>
                         </div>
                         <div className="size_135 coach_item">
                             <img src="images/coach_img5.png" alt="Coach" />
@@ -35,7 +37,7 @@ export default function Coaches(){
                             <img src="images/coach_img7.png" alt="Coach" />
                         </div>
                         <div className="size_180 no_photo coach_item">
-                            <h3>Gym</h3>
+                            <h3>Fitness</h3>
                         </div>
                         <div className="size_135 coach_item">
                             <img src="images/coach_img8.png" alt="Coach" />

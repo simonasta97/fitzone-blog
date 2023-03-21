@@ -39,7 +39,8 @@ export default function Navigation(){
                     <ul className="nav">
                         <li role="presentation"><Link id='home' to="/">Home</Link></li>
                         <li role="presentation"><Link id='blog' to="/blog">Blog</Link></li>
-                        <li role="presentation"><Link to="/coaches">Recent News</Link></li>
+                        <li role="presentation"><Link to="/programs">Fitness Programs</Link></li>
+                        <li role="presentation"><Link to="/coaches">Coaching</Link></li>
                         <li role="presentation"><Link to="/contact">Contact us</Link></li>
                     </ul>
                 </div>
