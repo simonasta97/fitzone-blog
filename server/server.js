@@ -1534,55 +1534,31 @@
     	},
     	likes: {
     	},
-    	ideas: {
+    	programs: {
     		"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
     			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			title: "West Side Story star Rachel Zegler defends intimacy coordinators after Sean Bean criticism",
-    			description: "Zegler is one of a number of actors voicing support for the role, after Bean said they can ‘spoil the spontaneity’ of sex scenes Rachel Zegler, the actor who rose to fame as the lead in Steven Spielberg’s West Side Story, has spoken up in support of intimacy coordinators, after criticism of the role by Sean Bean earlier in the week. Speaking to the Times, Bean said such coordinators – largely brought in post #MeToo to help police on-set safety – can “spoil the spontaneity” of shooting a sex scene.",
-    			img: "https://m.media-amazon.com/images/M/MV5BMjQyNzg3MDQ2OF5BMl5BanBnXkFtZTgwMDAzNjcxNzM@._V1_SY150_CR25,0,100,150_AL_.jpg",
+    			title: "Weight Programs",
+    			description: "Family Healthy Weight Programs are one way to address childhood obesity. The programs focus on nutrition, physical activity, and behavior ...",
+    			videoUrl: "https://www.youtube.com/watch?v=EJKw3Mh0MyI",
     			_createdOn: 1615033373504,
     			_id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
     		},
     		"247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
     			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			title: "‘Sonic the Hedgehog 3’ Sets Christmas 2024 Release Date",
-    			description: "arlier this year, Sonic the Hedgehog 2 opened to a huge 72.1 million in a major boost for the domestic box office recovery, and particularly for family films. The movie went on to gross more than 401 million at the worldwide box office, a tidy sum considering the recovery was just getting started in earnest. Sonic 2 was one of the few films of the Covid-19 era to open ahead of its predecessor. Other bragging rights: It is scored the biggest launch of all time for a video game adaptation, beating the first Sonic, and was also Paramount’s biggest three-day opening since 2014.",
-    			img: "https://m.media-amazon.com/images/M/MV5BZWZhOTc2ZTktM2U2Ni00NWQyLWI0YTQtODZmMzM4ZDhjYmJjXkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_SY150_CR25,0,100,150_AL_.jpg",
+    			title: "For beginners",
+    			description: "For a beginner's workout to be effective, the full-body program should incorporate high-volume training, increased intensity.",
+    			videoUrl: "https://www.youtube.com/watch?v=sthD8ziGP1c",
     			_createdOn: 1615033452480,
     			_id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
     		},
     		"b8608c22-dd57-4b24-948e-b358f536b958": {
     			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			title: "David Ayer Broke Brad Pitt Down To Prepare Him For Fury",
-    			description: "Early in David Ayer's 2014 war film 'Fury,' the dead body of an American soldier is seen face-down on a muddy battlefield, the poor soul obliterated by a vicious battle that had taken place earlier in the day. One can make out the vague shape of a human being, but it's largely just blood and pulp at this point. Other soldiers mill around nonchalantly, coldly accustomed to the sight of fallen comrades. Brad Pitt, as Staff Sergeant Don 'Wardaddy' Collier, orders the men under his command to climb on board the titular Sherman tank and move out to the next battle. The tank rolls...",
-    			img: "https://m.media-amazon.com/images/M/MV5BZjBmMTY4M2ItMmEwNC00NTUyLWIyZDEtYWNhNjViNjRiOGVlXkEyXkFqcGdeQXVyMTY2MzU0MjA@._V1_SY150_CR5,0,100,150_AL_.jpg",
+    			title: "Building Muscles",
+    			description: "Building muscle means more than going to the gym. It means lifting the right way, eating the right way, and resting the right way.",
+    			videoUrl: "https://www.youtube.com/watch?v=dhCwHlL32Jw",
     			_createdOn: 1615033491967,
     			_id: "b8608c22-dd57-4b24-948e-b358f536b958"
     		},
-            "c8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			title: "Boba Fett's First-Ever Appearance Actually Wasn't In Star Wars Movies Or TV",
-    			description: "Who thought to call it Star Wars Celebration, and not The Boba Fête? At last recount, the character of Boba Fett was one of thousands of clones extracted from his father, Jango Fett (Temuera Morrison), in 'Star Wars: Episode II - Attack of the Clones.' Boba's childhood wasn't a happy one, however. The kid was present when an army of lightsaber-wielding Jedi attacked, and he got to witness Mace Windu (Samuel L. Jackson) decapitating his father. As an adult, Boba Fett would become a bounty hunter, fall in with criminals, and eventually be fed into the mouth of an awaiting Shai Hulud on the distant...",
-    			img: "https://m.media-amazon.com/images/M/MV5BNmRlZWQxMjUtNjJkZS00MTY2LWJlYzgtN2Y3N2VhYTUwZDM4XkEyXkFqcGdeQXVyMTIzMDI5MzAy._V1_SY150_CR0,0,100,150_AL_.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "c8608c22-dd57-4b24-948e-b358f536b958"
-    		},
-            "d8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			title: "My Best Friend's Exorcism First Look: Elsie Fisher And Amiah Miller Possess The 1980s",
-    			description: "The script of 'Jennifer's Body' said it best, 'Hell is a teenage girl.' In the latest addition to the teen girl horror movie collection, Elsie Fisher and Amiah Miller star as besties Abby and Gretchen in 'My Best Friend's Exorcism, and one of them may or may not be possessed by a demon. Based on the best-selling book of the same name by Grady Hendrix 'My Best Friend's Exorcism' takes a page out of the Christopher Pike-esque teenage horror novels of the 1980s,",
-    			img: "https://m.media-amazon.com/images/M/MV5BMTMxNzYwMjc1Ml5BMl5BanBnXkFtZTcwNDI3MDE3Mg@@._V1_SY150_CR0,0,100,150_AL_.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "d8608c22-dd57-4b24-948e-b358f536b958"
-    		},
-            "e8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			title: "Jason Momoa Slams His ‘Conan the Barbarian’ Movie: It ‘Really Sucked’ and ‘Turned Into a Big Pile of S—‘",
-    			description: "Jason Momoa’s filmography includes hits like “Aquaman” and “Dune,” but it also has one film the actor himself considers to be a “big pile of shit.” That would be “Conan the Barbarian,” the 2011 reboot that cast Momoa in the title role. The movie was lambasted by critics and bombed at the box office with a 63 million worldwide gross on a production budget in the 90 million range. Momoa recently told GQ magazine that the “Conan” film that got released was not the “Conan” movie he thought he was making.“I’ve been a part of a lot of things that really sucked, and movies where it’s out of your hands",
-    			img: "https://m.media-amazon.com/images/M/MV5BYWRhN2FlYTEtMzIxOC00ODFlLWI5OGMtODVhYTQxNzZjY2JhXkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_SY150_CR63,0,100,150_AL_.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "e8608c22-dd57-4b24-948e-b358f536b958"
-    		}
     	},
     	catalog: {
     		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {

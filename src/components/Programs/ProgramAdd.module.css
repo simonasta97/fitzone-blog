@@ -1,0 +1,112 @@
+.createHeading {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.createForm {
+    width: 500px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.createForm label{
+    color: #321533;
+    font-size: 18px;
+}
+
+.createForm input{
+    border: none;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 5px;
+    line-height: 50px;
+    display: block;
+    margin: 10px auto;
+    width: calc(100% - 26px);
+    padding-left: 20px;
+}
+
+.submitBtn {
+    margin: 30px 0;
+    font-size: 20px;
+    border: none;
+    background-color: #851b55;
+    border-radius: 5px;
+    color: #1a1320;
+    cursor: pointer;
+    width: calc(100% - 20px);
+    padding: 13px 0;
+}
+
+.submitBtn:hover {
+    filter: drop-shadow(0px 3px 0px #9B3148);
+}
+
+.submitBtn:disabled {
+    background-color: #9B3148;
+    filter: none;
+    cursor: default;
+}
+
+.createForm textarea{
+    width: calc(100% - 26px);
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2px;
+}
+
+.createForm input[type="checkbox"]{
+    display: inline;
+    width: 16px;
+    margin-right: 5px;
+}
+
+.createForm input[name="Create"] {
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #a72d92;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.backBtn{
+    font-size: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #bd0a37;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mandatory {
+    color: #314a36;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.hint {
+    text-align: center;
+    color: #314a36;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.hint a {
+    color: #140b0a;
+}

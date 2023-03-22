@@ -12,18 +12,22 @@ export default function Navigation(){
 
                     <ul className="list-inline contact_info">
                         {user.email
-                            ? 
-                                <>
-                                    <li><span>Hello, {user.email}</span></li>
-                                    <li><Link id='create' to="/create">ADD POST</Link></li>
-                                    <li><Link to="/logout">LOGOUT</Link></li>
-                                </>
-                                
+                            ?
+                            <>
+                                <li><span>Hello, {user.email}</span></li>
+                                <li><Link id='create' to="/create">ADD POST</Link></li>
+                                {user.email === 'admin@abv.bg'
+                                    ? <li><Link  id='addProgram' to="/addProgram">ADD PROGRAM</Link></li>
+                                    : null
+                                }
+                                <li><Link to="/logout">LOGOUT</Link></li>
+                            </>
+
                             :
-                                <>
-                                    <li><Link  id='login' to="/login">LOGIN</Link></li>
-                                    <li><Link  id='register' to="/register">REGISTER</Link></li>
-                                </>
+                            <>
+                                <li><Link id='login' to="/login">LOGIN</Link></li>
+                                <li><Link id='register' to="/register">REGISTER</Link></li>
+                            </>
                         }
                         {/* <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li> */}
                     </ul>
@@ -39,7 +43,7 @@ export default function Navigation(){
                     <ul className="nav">
                         <li role="presentation"><Link id='home' to="/">Home</Link></li>
                         <li role="presentation"><Link id='blog' to="/blog">Blog</Link></li>
-                        <li role="presentation"><Link to="/programs">Fitness Programs</Link></li>
+                        <li role="presentation"><Link id='programs' to="/programs">Fitness Programs</Link></li>
                         <li role="presentation"><Link to="/coaches">Coaching</Link></li>
                         <li role="presentation"><Link to="/contact">Contact us</Link></li>
                     </ul>

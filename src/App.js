@@ -13,11 +13,14 @@ import PrivateRoute from './components/common/PrivateRoute';
 import { Logout } from './components/Logout/Logout';
 import Blog from './components/Blog/Blog';
 import { PostProvider } from './contexts/PostContext';
+import { ProgramsProvider } from './contexts/ProgramContext';
 import { PostDetails } from './components/Details/PostDetails';
 import { PostEdit } from './components/Edit/PostEdit';
 import { PostCreate } from './components/Create/PostCreate';
 import Coaches from './components/Coaches/Coaches';
 import Programs from './components/Programs/Programs';
+import { ProgramAdd } from './components/Programs/ProgramAdd';
+import { ProgramEdit } from './components/Programs/ProgramEdit';
 
 
 function App() {
@@ -25,28 +28,36 @@ function App() {
         <>
             <PostProvider>
                 <AuthProvider>
-                    <Loading />
-                    <Navigation />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<RegisterWithAuth />} />
-                        <Route element={<PrivateGuard />}>
-                            <Route path="/logout" element={<Logout />} />
-                            <Route path="/details/:postId/edit" element={<PostEdit />} />
-                        </Route>
-                        <Route path="/blog" element={<Blog />} />
-                        <Route path="/programs" element={<Programs/>} />
-                        <Route path="/coaches" element={<Coaches />} />
-                        <Route path="/create" element={(
-                            <PrivateRoute>
-                                <PostCreate />
-                            </PrivateRoute>
-                        )} />
-                        <Route path="/details/:postId" element={<PostDetails />} />
-                    </Routes>
-                    <Footer />
-                    <ScrollUp />
+                    <ProgramsProvider>
+                        <Loading />
+                        <Navigation />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<RegisterWithAuth />} />
+                            <Route element={<PrivateGuard />}>
+                                <Route path="/logout" element={<Logout />} />
+                                <Route path="/details/:postId/edit" element={<PostEdit />} />
+                                <Route path="/programs/:programId/edit" element={<ProgramEdit />} />
+                            </Route>
+                            <Route path="/blog" element={<Blog />} />
+                            <Route path="/programs" element={<Programs/>} />
+                            <Route path="/coaches" element={<Coaches />} />
+                            <Route path="/create" element={(
+                                <PrivateRoute>
+                                    <PostCreate />
+                                </PrivateRoute>
+                            )} />
+                            <Route path="/addProgram" element={(
+                                <PrivateRoute>
+                                    <ProgramAdd />
+                                </PrivateRoute>
+                            )} />
+                            <Route path="/details/:postId" element={<PostDetails />} />
+                        </Routes>
+                        <Footer />
+                        <ScrollUp />
+                    </ProgramsProvider>
                 </AuthProvider>
             </PostProvider>
         </>
