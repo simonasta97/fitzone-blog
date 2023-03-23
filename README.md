@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/simonasta97/fitzone-blog.git">
+    <img src="./public/images/fitness.png" alt="Logo" width="75">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">FitZone Blog</h3>
+  <p align="center">
+    Build Your Body Strong!
+    <br />
+    <br />
+    <img width ='46px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'>
+    <br />
+    <a href="">Live Demo</a>
+    ·
+    <a href="https://github.com/simonasta?tab=repositories">Explore my other projects</a>
+  </p>
+</p>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### `npm start`
+<kbd>![image](https://user-images.githubusercontent.com/103176056/227202991-d7ddb9ca-2cf8-4a0a-9eb5-e10a833754ed.png)</kbd>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+FitZone blog allows you to find and add information about how to be healthy, to share comments & find your fitness program!
 
-### `npm test`
+## Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* A **Guest view**, with limited interaction and a **Logged in view** with full functionality
+* Logged in users can: 
+    * **Add** new posts
+    * **Comment**
+    * **Add** new fitness program(admin only)
+    * **Delete** or **Edit** any post they have created 
+* Client-side **Routing** via **React Router**
 
-### `npm run build`
+The website uses functional components, the **Context API**, **Controlled Forms** and does styling via **CSS modules** and **Bootstrap**.
+Architecturally, components are split into folders, containing the relevant logic & styling. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project is built using:
+* [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+* [react-router](https://reactrouter.com/en/main) - collection of navigational components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- GETTING STARTED -->
+## Getting Started
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repo
+   ```sh
+   git clone https://github.com/simonasta97/fitzone-blog.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Start the project
+   ```sh
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- USAGE EXAMPLES -->
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Register** a new account or **Login** with the demo credentials. This allows you to **Create** new posts and **Add** new program(only for admin), to **Comment** on all existing posts. Furthermore, you can **Edit** & **Delete** the posts you have created and if you are admin you can  **Edit** & **Delete** the fitness program. **Blog** page (All users can view all posts. Authenticated users have ability to view their own posts.)
+**Details** page(All users can view detail information for each post. Guests can see only the information for given post. The author of post have ability to edit or delete post. At the comments section of detail view authenticated users can write or delete comments.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- CONTACT -->
+## Contact
 
-## Learn More
+Simona Milcheva - simonasta@abv.bg
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/simonasta97/fitzone-blog.git](https://github.com/simonasta97/fitzone-blog.git)
