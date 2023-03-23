@@ -22,7 +22,6 @@ export default function Footer() {
                                 <li role="presentation"><Link id='blog' to="/blog">Blog</Link></li>
                                 <li role="presentation"><Link to="/programs">Fitness Programs</Link></li>
                                 <li role="presentation"><Link to="/coaches">Coaching</Link></li>
-                                <li role="presentation"><Link to="/contact">Contact us</Link></li>
                             </ul>
                         </div>
                     </div>

@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-up";
 
 export default function ScrollUp(){
     return(
-        <div className="scrollup">
-            <Link to="/"><i className="fa fa-chevron-up"></i></Link>
-        </div>
+        <ScrollToTop showUnder={160}>
+            <div className="scrollup">
+                <i className="fa fa-chevron-up"></i>
+            </div>
+        </ScrollToTop>
     );
 }
