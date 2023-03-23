@@ -87,6 +87,9 @@ The project is built using:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Demo
+![](https://github.com/simonasta97/fitzone-blog/blob/main/public/images/demo.gif)
+
 **Register** a new account or **Login** with the demo credentials. This allows you to **Create** new posts and **Add** new program(only for admin), to **Comment** on all existing posts. Furthermore, you can **Edit** & **Delete** the posts you have created and if you are admin you can  **Edit** & **Delete** the fitness program. **Blog** page (All users can view all posts. Authenticated users have ability to view their own posts.)
 **Details** page(All users can view detail information for each post. Guests can see only the information for given post. The author of post have ability to edit or delete post. At the comments section of detail view authenticated users can write or delete comments.
 
