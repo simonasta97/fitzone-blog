@@ -12,9 +12,9 @@
     <br />
     <img width ='46px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'>
     <br />
-    <a href="">Live Demo</a>
+    <a href="#usage">Demo</a>
     ·
-    <a href="https://github.com/simonasta?tab=repositories">Explore my other projects</a>
+    <a href="https://github.com/simonasta97?tab=repositories">Explore my other projects</a>
   </p>
 </p>
 
