@@ -21,6 +21,7 @@ import Coaches from './components/Coaches/Coaches';
 import Programs from './components/Programs/Programs';
 import { ProgramAdd } from './components/Programs/ProgramAdd';
 import { ProgramEdit } from './components/Programs/ProgramEdit';
+import { NotFound } from './components/NotFound/NotFound';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
                                 </PrivateRoute>
                             )} />
                             <Route path="/details/:postId" element={<PostDetails />} />
+                            <Route path="*" element={<NotFound />}></Route>
                         </Routes>
                         <Footer />
                         <ScrollUp />
