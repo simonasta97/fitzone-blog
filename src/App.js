@@ -22,6 +22,8 @@ import Programs from './components/Programs/Programs';
 import { ProgramAdd } from './components/Programs/ProgramAdd';
 import { ProgramEdit } from './components/Programs/ProgramEdit';
 import { NotFound } from './components/NotFound/NotFound';
+import { NotificationProvider } from './contexts/NotificationContext';
+import Notification from './components/common/Notification/Notification';
 
 
 function App() {
@@ -29,37 +31,40 @@ function App() {
         <>
             <PostProvider>
                 <AuthProvider>
-                    <ProgramsProvider>
-                        <Loading />
-                        <Navigation />
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/register" element={<RegisterWithAuth />} />
-                            <Route element={<PrivateGuard />}>
-                                <Route path="/logout" element={<Logout />} />
-                                <Route path="/details/:postId/edit" element={<PostEdit />} />
-                                <Route path="/programs/:programId/edit" element={<ProgramEdit />} />
-                            </Route>
-                            <Route path="/blog" element={<Blog />} />
-                            <Route path="/programs" element={<Programs/>} />
-                            <Route path="/coaches" element={<Coaches />} />
-                            <Route path="/create" element={(
-                                <PrivateRoute>
-                                    <PostCreate />
-                                </PrivateRoute>
-                            )} />
-                            <Route path="/addProgram" element={(
-                                <PrivateRoute>
-                                    <ProgramAdd />
-                                </PrivateRoute>
-                            )} />
-                            <Route path="/details/:postId" element={<PostDetails />} />
-                            <Route path="*" element={<NotFound />}></Route>
-                        </Routes>
-                        <Footer />
-                        <ScrollUp />
-                    </ProgramsProvider>
+                    <NotificationProvider>
+                        <ProgramsProvider>
+                            <Notification />
+                            <Loading />
+                            <Navigation />
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/register" element={<RegisterWithAuth />} />
+                                <Route element={<PrivateGuard />}>
+                                    <Route path="/logout" element={<Logout />} />
+                                    <Route path="/details/:postId/edit" element={<PostEdit />} />
+                                    <Route path="/programs/:programId/edit" element={<ProgramEdit />} />
+                                </Route>
+                                <Route path="/blog" element={<Blog />} />
+                                <Route path="/programs" element={<Programs/>} />
+                                <Route path="/coaches" element={<Coaches />} />
+                                <Route path="/create" element={(
+                                    <PrivateRoute>
+                                        <PostCreate />
+                                    </PrivateRoute>
+                                )} />
+                                <Route path="/addProgram" element={(
+                                    <PrivateRoute>
+                                        <ProgramAdd />
+                                    </PrivateRoute>
+                                )} />
+                                <Route path="/details/:postId" element={<PostDetails />} />
+                                <Route path="*" element={<NotFound />}></Route>
+                            </Routes>
+                            <Footer />
+                            <ScrollUp />
+                        </ProgramsProvider>
+                    </NotificationProvider>
                 </AuthProvider>
             </PostProvider>
         </>

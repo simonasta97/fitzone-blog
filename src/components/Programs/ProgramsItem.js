@@ -25,7 +25,7 @@ export const ProgramsItem = ({ programs }) => {
                 <span className="flaticon flaticon-weightlifting"></span>
                 <h3>{programs.title}</h3>
                 <p>{programs.description}</p>
-                <a href={programs.videoUrl}  target="_blank" rel="noreferrer" className="btn know_btn">Know More</a>
+                <a href={programs.videoUrl}  target="_blank" rel="noreferrer" className="btn know_btn"><span className="fa fa-youtube"></span>Watch video</a>
                 {user.email === 'admin@abv.bg'
                     ? <div className="programs_btn">
                         <Link

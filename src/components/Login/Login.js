@@ -3,10 +3,12 @@ import { useNavigate } from "react-router";
 
 import style from './Login.module.css';
 import { AuthContext } from "../../contexts/AuthContext";
+import { NotificationContext } from '../../contexts/NotificationContext';
 import * as authService from "../../services/authService";
 import { Link } from "react-router-dom";
 
 export default function Login(){
+    const { addNotification } = useContext(NotificationContext);
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     useEffect(()=>{document.getElementById('login').classList.add('active')},[])
@@ -21,12 +23,14 @@ export default function Login(){
 
         authService.login(email, password)
             .then(authData => {
-                userLogin(authData);
-                navigate('/');
+                if (authData == "403") {
+                    addNotification("Username or password don't match")
+                }
+                else{
+                    userLogin(authData);
+                    navigate('/');
+                }
             })
-            .catch(() => {
-                navigate('/404');
-            });
     };
 
     return (
