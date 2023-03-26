@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../contexts/AuthContext"
 import { ProgramContext } from "../../contexts/ProgramContext"
 import * as programService from '../../services/programService'
@@ -28,7 +28,11 @@ export const ProgramsItem = ({ programs }) => {
                 <a href={programs.videoUrl}  target="_blank" rel="noreferrer" className="btn know_btn">Know More</a>
                 {user.email === 'admin@abv.bg'
                     ? <div className="programs_btn">
-                        <button onClick={(e) => { e.preventDefault(); navigate((`/programs/${programs._id}/edit`)) }} className="btn btn-warning">Edit</button>
+                        <Link
+                            className="btn btn-warning"
+                            to={`/programs/${programs._id}/edit`}
+                        >Edit</Link>
+                        
                         <button onClick={programsDeleteHandler} className="btn btn-danger">Delete</button>
                     </div>
                     : null

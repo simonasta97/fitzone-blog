@@ -5,7 +5,6 @@ import { useAuthContext } from '../../contexts/AuthContext';
 import style from './PostDetails.module.css';
 import * as commentService from'../../services/commentService'
 import * as postService from '../../services/postService';
-import Header from "../Header";
 
 export const PostDetails = () => {
     const navigate = useNavigate();
@@ -52,7 +51,25 @@ export const PostDetails = () => {
     }
     return (
         <>
-            <Header />
+            <header id="home">
+                <div id="carousel" className="carousel slide" data-ride="carousel">
+                    <div className="carousel-inner" role="listbox">
+                        <div className="item active">
+                            <img src="https://m.netinfo.bg/media/images/47307/47307923/orig-orig-pilates.jpg" alt="Strong Body" />
+                            <div className="carousel-caption photo_overlay">
+                                <div className="container">
+                                    <div className="carousel_caption_inner">
+                                        <h3>Build Your </h3>
+                                        <h1>Body Strong</h1>
+
+                                        <p>Stop Guessing And Stressing About How To Be Healthy! You don't need more confusing information. We've been the trusted voice in fitness and nutrition. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
             <section id="features">
                 <div className={style.container}>
                     <h2 className={style.title}>{currentPost.title}</h2>
