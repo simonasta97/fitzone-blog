@@ -1,19 +1,27 @@
-import './App.css';
+// React, Hooks
 import { Routes, Route} from 'react-router';
+
+// Context
+import { AuthProvider } from './contexts/AuthContext';
+import { PostProvider } from './contexts/PostContext';
+import { ProgramsProvider } from './contexts/ProgramContext';
+import { NotificationProvider } from './contexts/NotificationContext';
+
+// CSS
+import './App.css';
+
+// Components
 import Navigation from './components/Navigation';
 import Loading from './components/Loading';
 import ScrollUp from './components/ScrollUp';
 import Home from './components/Home/Home'
 import Footer from './components/Footer';
-import { AuthProvider } from './contexts/AuthContext';
 import Login  from './components/Login/Login';
 import { RegisterWithAuth } from './components/Register/Register';
 import PrivateGuard from './components/common/PrivateGuard';
 import PrivateRoute from './components/common/PrivateRoute';
 import { Logout } from './components/Logout/Logout';
 import Blog from './components/Blog/Blog';
-import { PostProvider } from './contexts/PostContext';
-import { ProgramsProvider } from './contexts/ProgramContext';
 import { PostDetails } from './components/Details/PostDetails';
 import { PostEdit } from './components/Edit/PostEdit';
 import { PostCreate } from './components/Create/PostCreate';
@@ -22,7 +30,6 @@ import Programs from './components/Programs/Programs';
 import { ProgramAdd } from './components/Programs/ProgramAdd';
 import { ProgramEdit } from './components/Programs/ProgramEdit';
 import { NotFound } from './components/NotFound/NotFound';
-import { NotificationProvider } from './contexts/NotificationContext';
 import Notification from './components/common/Notification/Notification';
 
 
