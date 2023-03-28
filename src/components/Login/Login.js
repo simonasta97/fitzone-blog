@@ -29,12 +29,12 @@ export default function Login(){
         } = Object.fromEntries(new FormData(e.target));
 
         authService.login(email, password)
-            .then(data => {
-                if (data === "403") {
+            .then((authData) => {
+                if (authData === "403") {
                     addNotification("Username or password don't match")
                 }
                 else{
-                    userLogin(data);
+                    userLogin(authData);
                     navigate('/');
                 }
             })

@@ -29,7 +29,11 @@ const request = async (method, url, data) => {
 
         const result = await response.json();
 
-        return result;
+        if (response.ok) {
+            return result;
+        } else {
+            return result.code;
+        }
     } catch (error) {
         console.log(error);
     }

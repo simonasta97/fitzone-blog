@@ -1,14 +1,27 @@
+// React, Hooks
 import { useNavigate } from 'react-router';
-
-import style from './Register.module.css';
-import * as authService from "../../services/authService";
-import { withAuth } from "../../contexts/AuthContext";
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
+// Context
+import { withAuth } from "../../contexts/AuthContext";
+import { NotificationContext } from "../../contexts/NotificationContext";
+
+// Services
+import * as authService from "../../services/authService";
+
+// CSS
+import style from './Register.module.css';
 
 
 const Register = ({ auth }) => {
+    const [errors, setErrors] = useState({
+        emailTxt: null,
+        passTxt: null,
+        rePassTxt: null,
+    });
+    const [isCorrect, setIsCorrect] = useState(true);
+    const { addNotification } = useContext(NotificationContext);
     const navigate = useNavigate();
     useEffect(() => { document.getElementById('register').classList.add('active') }, [])
 
@@ -22,14 +35,64 @@ const Register = ({ auth }) => {
         const confirmPassword = formData.get('confirm-password');
 
         if (password !== confirmPassword) {
+            setErrors((state) => ({
+                ...state,
+                rePassTxt: "Passwords do not match",
+            }));
             return;
         }
 
-        authService.register(email, password)
-            .then(authData => {
-                auth.userLogin(authData);
-                navigate('/');
-            });
+        if (isCorrect) {
+            authService.register(email, password)
+                .then((authData) => {
+                    if (authData === "409") {
+                        addNotification("User already exists");
+                    } else if (authData === "400") {
+                        throw authData;
+                    } else {
+                        auth.userLogin(authData);
+                        navigate('/');
+                    }
+                });
+        }
+    }
+
+    function FormErrorVal(e) {
+        const { name, value } = e.target;
+        let emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/gm;
+
+        switch (name) {
+            case "email":
+                if (emailRegex.test(value)) {
+                    setErrors((state) => ({ ...state, emailTxt: false }));
+                    setIsCorrect(true);
+                } else {
+                    setErrors((state) => ({
+                        ...state,
+                        emailTxt: "Email address is invalid",
+                    }));
+                    setIsCorrect(false);
+                }
+                break;
+            case "password":
+                value.length < 6
+                    ? setErrors((state) => ({
+                        ...state,
+                        passTxt: "Must be at least 6 characters",
+                    }))
+                    : setErrors((state) => ({ ...state, passTxt: false }));
+                break;
+            case "confirmPassword":
+                !value
+                    ? setErrors((state) => ({
+                        ...state,
+                        rePassTxt: "ConfirmPassword password is required",
+                    }))
+                    : setErrors((state) => ({ ...state, rePassTxt: false }));
+                break;
+            default:
+                break;
+        }
     }
 
     return (
@@ -52,15 +115,39 @@ const Register = ({ auth }) => {
                                                     className="form-control mt-1"
                                                     name="email"
                                                     placeholder="Enter email"
+                                                    onBlur={FormErrorVal}
                                                 />
+                                                <p className={errors.emailTxt ? "error" : "hidden"}>
+                                                    {errors.emailTxt}
+                                                </p>
                                             </div>
                                             <div className="form-group mt-3">
                                                 <label htmlFor="pass">Password:</label>
-                                                <input type="password" name="password" className="form-control mt-1" id="register-password" placeholder="Enter password" />
+                                                <input 
+                                                    type="password" 
+                                                    name="password" 
+                                                    className="form-control mt-1" 
+                                                    id="register-password" 
+                                                    placeholder="Enter password"
+                                                    onBlur={FormErrorVal}
+                                                />
+                                                <p className={errors.passTxt ? "error" : "hidden"}>
+                                                    {errors.passTxt}
+                                                </p>
                                             </div>
                                             <div className="form-group mt-3">
                                                 <label htmlFor="con-pass">Confirm Password:</label>
-                                                <input type="password" name="confirm-password" className="form-control mt-1" id="confirm-password" placeholder="Enter password" />
+                                                <input 
+                                                    type="password" 
+                                                    name="confirm-password" 
+                                                    className="form-control mt-1" 
+                                                    id="confirm-password" 
+                                                    placeholder="Enter password"
+                                                    onBlur={FormErrorVal}
+                                                />
+                                                <p className={errors.rePassTxt ? "error" : "hidden"}>
+                                                    {errors.rePassTxt}
+                                                </p>
                                             </div>
                                             <div className="d-grid gap-2 mt-3">
                                                 <input className="btn btn-primary" type="submit" value="Sign up" />
