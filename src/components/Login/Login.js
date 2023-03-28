@@ -1,13 +1,20 @@
-import { useContext,useEffect } from "react";
+// React, Hooks
+import { useContext,useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-
-import style from './Login.module.css';
-import { AuthContext } from "../../contexts/AuthContext";
-import { NotificationContext } from '../../contexts/NotificationContext';
-import * as authService from "../../services/authService";
 import { Link } from "react-router-dom";
 
+// Context
+import { AuthContext } from "../../contexts/AuthContext";
+import { NotificationContext } from '../../contexts/NotificationContext';
+
+// Services
+import * as authService from "../../services/authService";
+
+// CSS
+import style from './Login.module.css';
+
 export default function Login(){
+    const [errors, setErrors] = useState({ emailTxt: null, passTxt: null });
     const { addNotification } = useContext(NotificationContext);
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -22,16 +29,42 @@ export default function Login(){
         } = Object.fromEntries(new FormData(e.target));
 
         authService.login(email, password)
-            .then(authData => {
-                if (authData == "403") {
+            .then(data => {
+                if (data === "403") {
                     addNotification("Username or password don't match")
                 }
                 else{
-                    userLogin(authData);
+                    userLogin(data);
                     navigate('/');
                 }
             })
     };
+
+    function formErrorVal(e) {
+        const { name, value } = e.target;
+        let emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/gm;
+
+        switch (name) {
+            case "email":
+                emailRegex.test(value)
+                    ? setErrors((state) => ({ ...state, emailTxt: false }))
+                    : setErrors((state) => ({
+                        ...state,
+                        emailTxt: "Email address is invalid",
+                    }));
+                break;
+            case "password":
+                !value
+                    ? setErrors((state) => ({
+                        ...state,
+                        passTxt: "Password is required",
+                    }))
+                    : setErrors((state) => ({ ...state, passTxt: false }));
+                break;
+            default:
+                break;
+        }
+    }
 
     return (
         <>
@@ -51,15 +84,29 @@ export default function Login(){
                                                     <label htmlFor="email">Email:</label>
                                                     <input
                                                         type="email"
-                                                        id="email"
                                                         name="email"
                                                         className="form-control mt-1"
                                                         placeholder="Enter email"
+                                                        onBlur={formErrorVal}
+                                                        id={errors.emailTxt ? "redInput" : "normalInputEmail"}
                                                     />
+                                                    <p className={errors.emailTxt ? style.error : style.hidden}>
+                                                        {errors.emailTxt}
+                                                    </p>
                                                 </div>
                                                 <div className="form-group mt-3">
                                                     <label htmlFor="login-pass">Password:</label>
-                                                    <input type="password" id="login-password" className="form-control mt-1" name="password" placeholder="Enter password" />
+                                                    <input 
+                                                        type="password" 
+                                                        name="password"
+                                                        className="form-control mt-1"
+                                                        placeholder="Enter password"
+                                                        onBlur={formErrorVal}
+                                                        id={errors.passTxt ? "redInput" : "normalInput"}
+                                                    />
+                                                    <p className={errors.passTxt ? style.error : style.hidden}>
+                                                        {errors.passTxt}
+                                                    </p>
                                                 </div>
                                                 <div className="d-grid gap-2 mt-3">
                                                     <input type="submit" className="btn btn-primary" value="Login" />

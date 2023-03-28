@@ -4,8 +4,32 @@
     padding-bottom: 20px;
     border-radius: 8px;
   }  
-
 .authFormContent {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.error {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0px #140136;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#redInput {
+  border-color: #db0909;
+}
+
+#normalInput {
+  border-color: #d9d9d9;
+}
+
+#normalInputEmail{
+  border-color: #d9d9d9;
+}

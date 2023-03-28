@@ -29,13 +29,14 @@ import Notification from './components/common/Notification/Notification';
 function App() {
     return (
         <>
+
             <PostProvider>
                 <AuthProvider>
                     <NotificationProvider>
                         <ProgramsProvider>
-                            <Notification />
                             <Loading />
                             <Navigation />
+                            <Notification />
                             <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route path="/login" element={<Login />} />
