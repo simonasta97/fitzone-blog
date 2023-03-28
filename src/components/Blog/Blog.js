@@ -1,7 +1,14 @@
-import Header from "../Header";
+// React, Hooks
 import { useContext, useEffect } from 'react';
-import style from './Blog.module.css';
+
+// Context
 import { PostContext } from '../../contexts/PostContext'
+
+// CSS
+import style from './Blog.module.css';
+
+// Components
+import Header from "../Header";
 import { Post } from './Post';
 
 export default function Blog() {

@@ -1,4 +1,7 @@
+// React, Hooks
 import { Link } from "react-router-dom";
+
+// Context
 import { useAuthContext } from "../contexts/AuthContext";
 
 export default function Navigation(){
@@ -29,7 +32,6 @@ export default function Navigation(){
                                 <li><Link id='register' to="/register">REGISTER</Link></li>
                             </>
                         }
-                        {/* <li><Link to="/login"><span className="fa fa-envelope"></span><p>SIGN IN</p></Link></li> */}
                     </ul>
 
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#nav">

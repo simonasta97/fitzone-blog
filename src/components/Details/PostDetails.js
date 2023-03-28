@@ -1,8 +1,15 @@
+// React, Hooks
 import { useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+
+// Context
 import { PostContext } from '../../contexts/PostContext';
 import { useAuthContext } from '../../contexts/AuthContext';
+
+// CSS
 import style from './PostDetails.module.css';
+
+// Services
 import * as commentService from'../../services/commentService'
 import * as postService from '../../services/postService';
 

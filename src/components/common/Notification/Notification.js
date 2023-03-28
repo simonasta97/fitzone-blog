@@ -1,6 +1,12 @@
+// React, Hooks
 import { useContext } from "react";
-import { Toast } from "react-bootstrap";
+
+// Context
 import { NotificationContext } from "../../../contexts/NotificationContext";
+
+// Other
+import { Toast } from "react-bootstrap";
+
 
 const Notification = () => {
   const { notification, hideNotification } = useContext(NotificationContext);

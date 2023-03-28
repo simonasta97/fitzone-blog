@@ -1,7 +1,12 @@
-import Header from "../Header";
+// React, Hooks
 import { useContext, useEffect } from "react"
+
+// Context
 import { ProgramContext } from "../../contexts/ProgramContext"
+
+// Components
 import { ProgramsItem } from "./ProgramsItem"
+import Header from "../Header";
 
 export default function Programs() {
     const { programs } = useContext(ProgramContext)

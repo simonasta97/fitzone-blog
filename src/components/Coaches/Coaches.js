@@ -1,5 +1,8 @@
-import Header from "../Header";
+// CSS
 import style from './Coaches.module.css';
+
+// Components
+import Header from "../Header";
 
 export default function Coaches(){
     return(

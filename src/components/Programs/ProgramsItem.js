@@ -1,7 +1,12 @@
+// React, Hooks
 import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
+
+// Context
 import { AuthContext } from "../../contexts/AuthContext"
 import { ProgramContext } from "../../contexts/ProgramContext"
+
+// Services
 import * as programService from '../../services/programService'
 
 export const ProgramsItem = ({ programs }) => {

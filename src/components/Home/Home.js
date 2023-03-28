@@ -1,5 +1,10 @@
+// React, Hooks
 import { useContext,useEffect } from 'react';
+
+// Context
 import { PostContext } from "../../contexts/PostContext";
+
+// Components
 import Header from "../Header";
 import { LatestPosts } from './LatestPosts';
 import About from "../About/About";

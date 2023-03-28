@@ -1,9 +1,15 @@
+// React, Hooks
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 
-import style from './ProgramAdd.module.css';
+// Context
 import { ProgramContext } from '../../contexts/ProgramContext';
+
+// Services
 import * as programService from '../../services/programService';
+
+// CSS
+import style from './ProgramAdd.module.css';
 
 export const ProgramEdit = () => {
     const [currentProgram, setCurrentPrograms] = useState({});

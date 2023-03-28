@@ -1,9 +1,17 @@
+// React, Hooks
 import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import style from './ProgramAdd.module.css';
+// Context
 import { ProgramContext } from '../../contexts/ProgramContext';
+
+// CSS
+import style from './ProgramAdd.module.css';
+
+// Services
 import * as programService from '../../services/programService';
+
+// Components
 import Header from '../Header';
 
 export const ProgramAdd = () => {

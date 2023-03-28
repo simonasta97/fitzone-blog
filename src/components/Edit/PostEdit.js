@@ -1,11 +1,15 @@
+// React, Hooks
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 
+// Context
+import { PostContext } from "../../contexts/PostContext";
+
+// CSS
 import style from './PostEdit.module.css';
 
+// Services
 import * as postService from '../../services/postService';
-import { PostContext } from "../../contexts/PostContext";
-import Header from "../Header";
 
 export const PostEdit = () => {
     const [currentPost, setCurrentPost] = useState({});

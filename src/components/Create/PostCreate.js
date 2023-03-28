@@ -1,9 +1,17 @@
+// React, Hooks
 import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import style from './PostCreate.module.css';
+// Context
 import { PostContext } from '../../contexts/PostContext';
+
+// Services
 import * as postService from '../../services/postService';
+
+// CSS
+import style from './PostCreate.module.css';
+
+// Components
 import Header from '../Header';
 
 export const PostCreate = () => {
