@@ -36,11 +36,10 @@ import Notification from './components/common/Notification/Notification';
 function App() {
     return (
         <>
-
             <PostProvider>
                 <AuthProvider>
-                    <NotificationProvider>
-                        <ProgramsProvider>
+                    <ProgramsProvider>
+                        <NotificationProvider>
                             <Loading />
                             <Navigation />
                             <Notification />
@@ -71,8 +70,8 @@ function App() {
                             </Routes>
                             <Footer />
                             <ScrollUp />
-                        </ProgramsProvider>
-                    </NotificationProvider>
+                            </NotificationProvider>
+                    </ProgramsProvider>
                 </AuthProvider>
             </PostProvider>
         </>

@@ -9,3 +9,12 @@
   padding-left: 12%;
   padding-right: 12%;
 }
+
+.error{
+  background: rgba(255, 0, 0, 0.705);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

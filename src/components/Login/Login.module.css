@@ -9,19 +9,14 @@
   padding-right: 12%;
 }
 
-.error {
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: 0 0 4px 0px #140136;
-  margin: 0;
+.error{
+  background: rgba(255, 0, 0, 0.705);
+  color: white;
 }
 
 .hidden {
   display: none;
 }
-
 #redInput {
   border-color: #db0909;
 }

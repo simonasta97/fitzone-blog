@@ -43,14 +43,13 @@ const Register = ({ auth }) => {
         }
 
         if (isCorrect) {
-            authService.register(email, password)
-                .then((authData) => {
-                    if (authData === "409") {
+            authService.register(email, password).then((data) => {
+                    if (data == "409") {
                         addNotification("User already exists");
-                    } else if (authData === "400") {
-                        throw authData;
+                    } else if (data == "400") {
+                        throw data;
                     } else {
-                        auth.userLogin(authData);
+                        auth.userLogin(data);
                         navigate('/');
                     }
                 });
@@ -117,7 +116,7 @@ const Register = ({ auth }) => {
                                                     placeholder="Enter email"
                                                     onBlur={FormErrorVal}
                                                 />
-                                                <p className={errors.emailTxt ? "error" : "hidden"}>
+                                                <p className={errors.emailTxt ? style.error : style.hidden}>
                                                     {errors.emailTxt}
                                                 </p>
                                             </div>
@@ -131,7 +130,7 @@ const Register = ({ auth }) => {
                                                     placeholder="Enter password"
                                                     onBlur={FormErrorVal}
                                                 />
-                                                <p className={errors.passTxt ? "error" : "hidden"}>
+                                                <p className={errors.passTxt ? style.error : style.hidden}>
                                                     {errors.passTxt}
                                                 </p>
                                             </div>
@@ -145,7 +144,7 @@ const Register = ({ auth }) => {
                                                     placeholder="Enter password"
                                                     onBlur={FormErrorVal}
                                                 />
-                                                <p className={errors.rePassTxt ? "error" : "hidden"}>
+                                                <p className={errors.rePassTxt ? style.error : style.hidden}>
                                                     {errors.rePassTxt}
                                                 </p>
                                             </div>

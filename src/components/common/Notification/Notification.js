@@ -4,9 +4,8 @@ import { useContext } from "react";
 // Context
 import { NotificationContext } from "../../../contexts/NotificationContext";
 
-// Other
-import { Toast } from "react-bootstrap";
-
+// CSS
+import style from './Notification.module.css';
 
 const Notification = () => {
   const { notification, hideNotification } = useContext(NotificationContext);
@@ -16,16 +15,16 @@ const Notification = () => {
   }
 
   return (
-    <Toast
-      className="notification d-inline-block m-1"
-      bg="Light"
-      onClose={hideNotification}
-    >
-      <Toast.Header>
-        <strong className="me-auto">Information</strong>
-      </Toast.Header>
-      <Toast.Body>{notification.message}</Toast.Body>
-    </Toast>
+    <>
+      <div className={style.notiContainer}>
+        <div className={style.notiWrapper}>
+          <div className={style.notification}>
+            <p>{notification.message}</p>
+            <button className={style.closeBtn} onClick={hideNotification}>✖</button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
