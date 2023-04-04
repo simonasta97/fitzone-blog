@@ -28,7 +28,7 @@ export const PostDetails = () => {
             const postComments = await commentService.getByPostId(postId)
             fetchPostDetails(postId, { ...postDetails, comments: postComments.map(x=> `${x.user.email}: ${x.text}` )});
         })();
-    }, [])
+    }, [postId, fetchPostDetails])
 
     const addCommentHandler = (e) => {
         e.preventDefault();

@@ -23,7 +23,7 @@ export const ProgramEdit = () => {
             .then(programsData => {
                 setCurrentPrograms(programsData);
             })
-    }, [])
+    }, [programId])
 
     const onSubmit = (e) => {
         e.preventDefault();

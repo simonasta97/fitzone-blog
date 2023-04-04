@@ -12,11 +12,6 @@
     height: 100vh;
 }
 
-.closeBtn {
-    background-color: red;
-    border: 2px solid green;
-    color: white;
-}
 
 .notiWrapper {
     pointer-events: auto;
@@ -26,22 +21,24 @@
 
 .notification {
     border-radius: 1em;
-    margin: 3px;
+    margin: 30px;
     text-align: center;
     font-family: "Helvetica";
     position: relative;
     height: 40px;
     overflow: hidden;
-    padding: 18px;
-    width: 1290px;
-    position: relative;
-
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(177, 16, 16);
+    border: 2px solid rgb(225, 240, 225);
+    color: white;
 }
 
 .notification p {
-    font-size: 21px;
+    font-size: 18px;
+    right: 10px;
     position: absolute;
-    top: 13px;
+    top: 10px;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -59,16 +56,19 @@
 
 }
 
-.close-btn {
+.closeBtn {
     position: absolute;
-    top: 2px;
-    right: 2px;
-    font-size: 12pt;
+    top: 5px;
+    right: 10px;
+    font-size: 10pt;
     padding: 5px;
     text-align: center;
+    background-color: red;
+    border: 2px solid green;
+    color: white;
 }
 
-.close-btn:hover {
+.closeBtn:hover {
     cursor: pointer;
     font-size: 14px;
 }

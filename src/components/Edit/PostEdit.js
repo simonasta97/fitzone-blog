@@ -23,7 +23,7 @@ export const PostEdit = () => {
             .then(postData => {
                 setCurrentPost(postData);
             })
-    }, [])
+    }, [postId])
 
     const onSubmit = (e) => {
         e.preventDefault();

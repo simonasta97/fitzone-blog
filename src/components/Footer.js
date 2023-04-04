@@ -30,14 +30,14 @@ export default function Footer() {
                         <div className="footer_right">
                             <h3>Contact Us</h3>
                             <ul className="list-unstyled footer_contact_info">
-                                <li><a href=""><span className="fa fa-envelope"></span><p>fitzone_blog@abv.bg</p></a></li>
+                                <li><Link to="/"><span className="fa fa-envelope"></span><p>fitzone_blog@abv.bg</p></Link></li>
                             </ul>
 
                             <ul className="list-inline social">
-                                <li><a href="" className="fa fa-facebook"></a></li>
-                                <li><a href="" className="fa fa-twitter"></a></li>
-                                <li><a href="" className="fa fa-linkedin"></a></li>
-                                <li><a href="" className="fa fa-youtube"></a></li>
+                                <li><Link to="/" className="fa fa-facebook"></Link></li>
+                                <li><Link to="/" className="fa fa-twitter"></Link></li>
+                                <li><Link to="/" className="fa fa-linkedin"></Link></li>
+                                <li><Link to="/" className="fa fa-youtube"></Link></li>
                             </ul>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export default function Footer() {
                         Made with
                         <i className="fa fa-heart"></i>
                         by
-                        <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a>
+                        <a target="_blank" rel="noreferrer" href="http://bootstrapthemes.co">Bootstrap Themes</a>
                         2016. All Rights Reserved
                     </p>
                 </div>
