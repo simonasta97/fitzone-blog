@@ -1,5 +1,5 @@
 // React, Hooks
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Context
@@ -15,19 +15,71 @@ import style from './PostCreate.module.css';
 import Header from '../Header';
 
 export const PostCreate = () => {
+    const [errors, setErrors] = useState({
+        titleTxt: null,
+        mainImgTxt: null,
+        descTxt: null,
+    });
+    const [isCorrect, setIsCorrect] = useState(false);
     const { postAdd } = useContext(PostContext);
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
     const onSubmit = (e) => {
         e.preventDefault();
 
         const postData = Object.fromEntries(new FormData(e.target));
-
-        postService.create(postData)
+        if (isCorrect){
+            postService.create(postData)
             .then(result => {
                 postAdd(result)
             });
+        }
     };
+
+    function FormErrorVal(e) {
+        const { name, value } = e.target;
+        switch (name) {
+            case "title":
+                if (!value) {
+                    setErrors((state) => ({
+                        ...state,
+                        titleTxt: "Title is required",
+                    }));
+                    setIsCorrect(false);
+                } else {
+                    setErrors((state) => ({ ...state, titleTxt: false }));
+                    setIsCorrect(true);
+                }
+                break;
+            case "imgUrl":
+                let imgRegex = /^https?:\/\/.*\/.*\.(png|gif|webp|jpeg|jpg)\??.*$/gmi;
+                if (!imgRegex.test(value)) {
+                    setErrors((state) => ({
+                        ...state,
+                        mainImgTxt: "Image URL is invalid",
+                    }));
+                    setIsCorrect(false);
+                } else {
+                    setErrors((state) => ({ ...state, mainImgTxt: false }));
+                    setIsCorrect(true);
+                }
+                break;
+            case "description":
+                if (value.length < 10) {
+                    setErrors((state) => ({
+                        ...state,
+                        descTxt: "Description must be at least 10 characters long",
+                    }));
+                    setIsCorrect(false);
+                } else {
+                    setErrors((state) => ({ ...state, descTxt: false }));
+                    setIsCorrect(true);
+                }
+                break;
+            default:
+                break;
+        }
+    }
 
     return (
         <>
@@ -36,11 +88,20 @@ export const PostCreate = () => {
                 <h2>Create Post:</h2>
                 <form id="create" onSubmit={onSubmit} className={style.createForm}>
                     <label htmlFor="title">Title:</label>
-                    <input type="text" id="title" name="title"  placeholder="Title of the post"/>
+                    <p className={errors.titleTxt ? style.error : style.hidden}>
+                        {errors.titleTxt}
+                    </p>
+                    <input type="text" id="title" name="title"  placeholder="Title of the post" onBlur={FormErrorVal}/>
                     <label htmlFor="img">Image:</label>
-                    <input type="text" id="img" name="imgUrl" placeholder="Enter URL here"/>
+                    <p className={errors.mainImgTxt ? style.error : style.hidden}>
+                        {errors.mainImgTxt}
+                    </p>
+                    <input type="text" id="img" name="imgUrl" placeholder="Enter URL here" onBlur={FormErrorVal}/>
                     <label htmlFor="description">Description:</label>
-                    <textarea name="description" id="description" placeholder="Enter a description " />
+                    <p className={errors.descTxt ? style.error : style.hidden}>
+                        {errors.descTxt}
+                    </p>
+                    <textarea name="description" id="description" placeholder="Enter a description " onBlur={FormErrorVal}/>
                     <input name="Create" type="submit" value="Add Post" />
                     <button onClick={(e) => { e.preventDefault(); navigate((`/`)) }} className={style.backBtn}>Go back</button>
                 </form>
