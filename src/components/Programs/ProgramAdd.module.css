@@ -110,3 +110,12 @@
 .hint a {
     color: #140b0a;
 }
+
+.error {
+    background: rgba(255, 0, 0, 0.705);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

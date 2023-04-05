@@ -91,17 +91,34 @@ export const PostCreate = () => {
                     <p className={errors.titleTxt ? style.error : style.hidden}>
                         {errors.titleTxt}
                     </p>
-                    <input type="text" id="title" name="title"  placeholder="Title of the post" onBlur={FormErrorVal}/>
+                    <input 
+                        type="text" 
+                        id="title" 
+                        name="title"  
+                        placeholder="Title of the post" 
+                        onBlur={FormErrorVal}
+                    />
                     <label htmlFor="img">Image:</label>
                     <p className={errors.mainImgTxt ? style.error : style.hidden}>
                         {errors.mainImgTxt}
                     </p>
-                    <input type="text" id="img" name="img" placeholder="Enter URL here" onBlur={FormErrorVal}/>
+                    <input 
+                        type="text" 
+                        id="img" 
+                        name="img" 
+                        placeholder="Enter URL here" 
+                        onBlur={FormErrorVal}
+                    />
                     <label htmlFor="description">Description:</label>
                     <p className={errors.descTxt ? style.error : style.hidden}>
                         {errors.descTxt}
                     </p>
-                    <textarea name="description" id="description" placeholder="Enter a description " onBlur={FormErrorVal}/>
+                    <textarea 
+                        name="description" 
+                        id="description" 
+                        placeholder="Enter a description" 
+                        onBlur={FormErrorVal}
+                    />
                     <input name="Create" type="submit" value="Add Post" />
                     <button onClick={(e) => { e.preventDefault(); navigate((`/`)) }} className={style.backBtn}>Go back</button>
                 </form>
