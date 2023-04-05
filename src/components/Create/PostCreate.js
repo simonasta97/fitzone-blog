@@ -51,7 +51,7 @@ export const PostCreate = () => {
                     setIsCorrect(true);
                 }
                 break;
-            case "imgUrl":
+            case "img":
                 let imgRegex = /^https?:\/\/.*\/.*\.(png|gif|webp|jpeg|jpg)\??.*$/gmi;
                 if (!imgRegex.test(value)) {
                     setErrors((state) => ({
@@ -96,7 +96,7 @@ export const PostCreate = () => {
                     <p className={errors.mainImgTxt ? style.error : style.hidden}>
                         {errors.mainImgTxt}
                     </p>
-                    <input type="text" id="img" name="imgUrl" placeholder="Enter URL here" onBlur={FormErrorVal}/>
+                    <input type="text" id="img" name="img" placeholder="Enter URL here" onBlur={FormErrorVal}/>
                     <label htmlFor="description">Description:</label>
                     <p className={errors.descTxt ? style.error : style.hidden}>
                         {errors.descTxt}

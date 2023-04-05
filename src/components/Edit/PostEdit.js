@@ -12,6 +12,12 @@ import style from './PostEdit.module.css';
 import * as postService from '../../services/postService';
 
 export const PostEdit = () => {
+    const [errors, setErrors] = useState({
+        titleTxt: null,
+        mainImgTxt: null,
+        descTxt: null,
+    });
+    const [isCorrect, setIsCorrect] = useState(false);
     const [currentPost, setCurrentPost] = useState({});
     const { postEdit } = useContext(PostContext);
     const { postId } = useParams();
@@ -28,13 +34,59 @@ export const PostEdit = () => {
         e.preventDefault();
 
         const postData = Object.fromEntries(new FormData(e.target));
-
-        postService.edit(postId, postData)
+        if (isCorrect){
+            postService.edit(postId, postData)
             .then(result => {
                 postEdit(postId, result);
                 navigate(`/details/${postId}`)
             });
+        }
     };
+
+    function FormErrorVal(e) {
+        const { name, value } = e.target;
+        switch (name) {
+            case "title":
+                if (!value) {
+                    setErrors((state) => ({
+                        ...state,
+                        titleTxt: "Title is required",
+                    }));
+                    setIsCorrect(false);
+                } else {
+                    setErrors((state) => ({ ...state, titleTxt: false }));
+                    setIsCorrect(true);
+                }
+                break;
+            case "img":
+                let imgRegex = /^https?:\/\/.*\/.*\.(png|gif|webp|jpeg|jpg)\??.*$/gmi;
+                if (!imgRegex.test(value)) {
+                    setErrors((state) => ({
+                        ...state,
+                        mainImgTxt: "Image URL is invalid",
+                    }));
+                    setIsCorrect(false);
+                } else {
+                    setErrors((state) => ({ ...state, mainImgTxt: false }));
+                    setIsCorrect(true);
+                }
+                break;
+            case "description":
+                if (value.length < 10) {
+                    setErrors((state) => ({
+                        ...state,
+                        descTxt: "Description must be at least 10 characters long",
+                    }));
+                    setIsCorrect(false);
+                } else {
+                    setErrors((state) => ({ ...state, descTxt: false }));
+                    setIsCorrect(true);
+                }
+                break;
+            default:
+                break;
+        }
+    }
 
     return (
         <>
@@ -62,12 +114,20 @@ export const PostEdit = () => {
                 <form id="edit" className={style.createForm} onSubmit={onSubmit}>
                     <div>
                         <label htmlFor="title">Post title:</label>
-                        <input type="text" id="title" name="title" defaultValue={currentPost.title} />
-                        
+                        <p className={errors.titleTxt ? style.error : style.hidden}>
+                            {errors.titleTxt}
+                        </p>
+                        <input type="text" id="title" name="title" defaultValue={currentPost.title} onBlur={FormErrorVal}/>
                         <label htmlFor="img">Image:</label>
-                        <input type="text" id="img" name="img" defaultValue={currentPost.img} />
+                        <p className={errors.mainImgTxt ? style.error : style.hidden}>
+                            {errors.mainImgTxt}
+                        </p>
+                        <input type="text" id="img" name="img" defaultValue={currentPost.img} onBlur={FormErrorVal}/>
                         <label htmlFor="description">Post description:</label>
-                        <textarea name="description" id="description" defaultValue={currentPost.description} />
+                        <p className={errors.descTxt ? style.error : style.hidden}>
+                            {errors.descTxt}
+                        </p>
+                        <textarea name="description" id="description" defaultValue={currentPost.description} onBlur={FormErrorVal}/>
                         <input name="Edit" type="submit" value="Edit Post" />
                         <button onClick={(e)=>{e.preventDefault();navigate((`/details/${postId}`))}} className={style.backBtn}>Go back</button>
                     </div>
