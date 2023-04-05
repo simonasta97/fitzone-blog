@@ -18,7 +18,6 @@ export const PostDetails = () => {
     const { addComment, fetchPostDetails, selectPost, postRemove} = useContext(PostContext);
     const { postId } = useParams();
     const { user } = useAuthContext();
-    useEffect(()=>{document.getElementById('blog').classList.add('active')},[])
     
     const currentPost = selectPost(postId);
 
@@ -28,7 +27,7 @@ export const PostDetails = () => {
             const postComments = await commentService.getByPostId(postId)
             fetchPostDetails(postId, { ...postDetails, comments: postComments.map(x=> `${x.user.email}: ${x.text}` )});
         })();
-    }, [postId, fetchPostDetails])
+    }, [])
 
     const addCommentHandler = (e) => {
         e.preventDefault();

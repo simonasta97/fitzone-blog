@@ -1,5 +1,5 @@
 // React, Hooks
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 
 // Context
 import { ProgramContext } from "../../contexts/ProgramContext"
@@ -10,7 +10,6 @@ import Header from "../Header";
 
 export default function Programs() {
     const { programs } = useContext(ProgramContext)
-    useEffect(() => { document.getElementById('programs').classList.add('active') }, [])
 
     return (
         <>

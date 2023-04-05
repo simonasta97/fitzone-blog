@@ -1,5 +1,5 @@
 // React, Hooks
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 
 // Context
 import { PostContext } from '../../contexts/PostContext'
@@ -13,7 +13,6 @@ import { Post } from './Post';
 
 export default function Blog() {
     const { posts } = useContext(PostContext)
-    useEffect(() => { document.getElementById('blog').classList.add('active') }, [])
     return (
         <>
             <Header />

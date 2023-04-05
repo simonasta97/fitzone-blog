@@ -16,7 +16,6 @@ export const PostEdit = () => {
     const { postEdit } = useContext(PostContext);
     const { postId } = useParams();
     const navigate = useNavigate();
-    useEffect(()=>{document.getElementById('blog').classList.add('active')},[])
 
     useEffect(() => {
         postService.getOne(postId)

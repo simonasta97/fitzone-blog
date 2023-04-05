@@ -1,5 +1,5 @@
 // React, Hooks
-import { useContext,useEffect } from 'react';
+import { useContext } from 'react';
 
 // Context
 import { PostContext } from "../../contexts/PostContext";
@@ -11,7 +11,6 @@ import About from "../About/About";
 
 export default function Home(){
     const { posts } = useContext(PostContext)
-    useEffect(()=>{document.getElementById('home').classList.add('active')},[])
     let postsLength = posts.length;
     let latestPosts = posts.slice(postsLength-3,postsLength)
     return (

@@ -1,5 +1,5 @@
 // React, Hooks
-import { useContext,useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,6 @@ export default function Login(){
     const { addNotification } = useContext(NotificationContext);
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
-    useEffect(()=>{document.getElementById('login').classList.add('active')},[])
 
     const onSubmit = (e) => {
         e.preventDefault();

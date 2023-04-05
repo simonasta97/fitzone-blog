@@ -1,5 +1,5 @@
 // React, Hooks
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Context
@@ -17,7 +17,6 @@ import Header from '../Header';
 export const PostCreate = () => {
     const { postAdd } = useContext(PostContext);
     const navigate=useNavigate()
-    useEffect(()=>{document.getElementById('create').classList.add('active')},[])
 
     const onSubmit = (e) => {
         e.preventDefault();

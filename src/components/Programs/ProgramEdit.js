@@ -16,7 +16,6 @@ export const ProgramEdit = () => {
     const { programsEdit } = useContext(ProgramContext);
     const { programId } = useParams();
     const navigate = useNavigate();
-    useEffect(()=>{document.getElementById('programs').classList.add('active')},[])
 
     useEffect(() => {
         programService.getOne(programId)
@@ -68,7 +67,7 @@ export const ProgramEdit = () => {
                     <input type="text" id="videoUrl" name="videoUrl" defaultValue={currentProgram.videoUrl} />
                     <label htmlFor="description">Program Description:</label>
                     <textarea name="description" id="description" defaultValue={currentProgram.description} />
-                    <input name="Create" type="submit" value="Edit News" />
+                    <input name="Create" type="submit" value="Edit Program" />
                 </form>
             </section>
         </>

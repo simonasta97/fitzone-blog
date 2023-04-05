@@ -1,7 +1,7 @@
 // React, Hooks
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useEffect, useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 
 // Context
 import { withAuth } from "../../contexts/AuthContext";
@@ -23,7 +23,6 @@ const Register = ({ auth }) => {
     const [isCorrect, setIsCorrect] = useState(true);
     const { addNotification } = useContext(NotificationContext);
     const navigate = useNavigate();
-    useEffect(() => { document.getElementById('register').classList.add('active') }, [])
 
     const onSubmit = (e) => {
         e.preventDefault();
